@@ -1,0 +1,12 @@
+<section>
+    <div class="main_sect">
+      <div class="bg_box">
+        <!-- <notifier-container></notifier-container> -->
+        <start *ngIf="composh == 'Start'"></start>
+        <level-one *ngIf="composh == 'Level1'"></level-one>
+        <level-two *ngIf="composh == 'Level2'"></level-two>
+        <level-three *ngIf="composh == 'Level3'"></level-three>
+        <finish *ngIf="composh == 'Finish'"></finish>
+      </div>
+    </div>
+  </section>

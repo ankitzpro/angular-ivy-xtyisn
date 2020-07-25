@@ -1,0 +1,40 @@
+<div class="d-flex" *ngIf="!stepOne">
+  <div>
+    <h1>Digit Challenge</h1>
+    <p>Press the <strong>“Right key”</strong> to continue</p>
+  </div>
+
+  <div class="icon">
+    <img
+      alt="Digit Challenge"
+      src="https://d8it4huxumps7.cloudfront.net/uploads/images/d2c-images/number-game.svg"
+    />
+  </div>
+
+  <div>
+    <button class="waves-effect" (click)="goToFirstStep()">
+      Start <i class="fa fa-long-arrow-right"></i>
+    </button>
+  </div>
+</div>
+
+
+<!-- STEP1 -->
+<div class="d-flex" *ngIf="stepOne">
+  <p class="cptn">
+    Choose the numbers and complete<br> the given equation to get the<br> desired result.
+  </p>
+
+  <div class="icon">
+    <img
+      alt="Digit Challenge"
+      src="https://d8it4huxumps7.cloudfront.net/uploads/images/d2c-images/number-game.svg"
+    />
+  </div>
+
+  <div>
+    <button class="waves-effect" (click)="submit()">
+      Next <i class="fa fa-long-arrow-right"></i>
+    </button>
+  </div>
+</div>

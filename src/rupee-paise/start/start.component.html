@@ -1,0 +1,52 @@
+<div class="d-flex" *ngIf="!stepOne">
+  <div>
+    <h1>Rupee & Paise</h1>
+    <p>Press the <strong>“Right key”</strong> to continue</p>
+  </div>
+
+  <div class="icon">
+    <img
+      alt="Rupee & Paise Game"
+      src="https://d8it4huxumps7.cloudfront.net/uploads/images/d2c-images/statements-and-shape-game.svg"
+    />
+  </div>
+
+  <div>
+    <button class="waves-effect" (click)="goToFirstStep()">
+      Start <i class="fa fa-long-arrow-right"></i>
+    </button>
+  </div>
+</div>
+
+<!-- STEP1 -->
+<div class="d-flex" *ngIf="stepOne">
+  <div>
+    <p class="cptn">
+      Choose if the Statement is <strong>“Correct”</strong> or
+      <strong>“Not”</strong>
+    </p>
+    <div class="move">
+      <div>
+        <i class="fa fa-check"></i>
+        <span>Click on if the <strong>statment is true</strong></span>
+      </div>
+      <div>
+        <i class="fa fa-times"></i>
+        <span>Click on if the <strong>statment is false</strong></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="icon">
+    <img
+      alt="Rupee & Paise Game"
+      src="https://d8it4huxumps7.cloudfront.net/uploads/images/d2c-images/statements-and-shape-game.svg"
+    />
+  </div>
+
+  <div>
+    <button class="waves-effect" (click)="submit()">
+      Next <i class="fa fa-long-arrow-right"></i>
+    </button>
+  </div>
+</div>

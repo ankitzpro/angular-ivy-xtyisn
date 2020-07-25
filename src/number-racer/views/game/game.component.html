@@ -1,0 +1,176 @@
+<div class="pdng">
+  <div class="label">
+    <!-- <div>
+      15<span>/{{ level }}</span>
+      <p>
+        Level
+      </p>
+    </div> -->
+    <strong>Target sum</strong>
+    <div>
+      {{ sum }}
+    </div>
+  </div>
+
+  <div>
+    <div class="number">
+      <div class="list" *ngFor="let in of counter(6); let i = index">
+        <ng-container *ngFor="let in of arr; let j = index">
+          <div *ngIf="i == 0" class="number_bg">
+            {{ in }}
+          </div>
+
+          <ng-container *ngIf="i > 0 && i < 5">
+            <div
+              *ngIf="xaxis != i || yaxis != j"
+              data-toggle="tooltip"
+              data-placement="top"
+            >
+              {{ movingnumber }}
+            </div>
+            <div
+              *ngIf="xaxis == i && yaxis == j"
+              class="slide_bg"
+              data-toggle="tooltip"
+              data-placement="top"
+            >
+              {{ movingnumber }}
+            </div>
+          </ng-container>
+
+          <div *ngIf="i == 5" class="value_bg">
+            {{ arr2[j] }}
+          </div>
+        </ng-container>
+      </div>
+    </div>
+
+    <div class="slide">
+      <div>
+        <h1 hidden>A</h1>
+      </div>
+      <div>
+        <div class="icon" *ngIf="pointer == 1"></div>
+        <!-- <img
+          *ngIf="pointer == 1"
+          src="https://d8it4huxumps7.cloudfront.net/uploads/images/d2c-images/number-race-icon.svg"
+        /> -->
+      </div>
+      <div>
+        <div class="icon" *ngIf="pointer == 2"></div>
+        <!-- <img
+          *ngIf="pointer == 2"
+          src="https://d8it4huxumps7.cloudfront.net/uploads/images/d2c-images/number-race-icon.svg"
+        /> -->
+      </div>
+      <div>
+        <div class="icon" *ngIf="pointer == 3"></div>
+        <!-- <img
+          *ngIf="pointer == 3"
+          src="https://d8it4huxumps7.cloudfront.net/uploads/images/d2c-images/number-race-icon.svg"
+        /> -->
+      </div>
+      <div>
+        <div class="icon" *ngIf="pointer == 4"></div>
+        <!-- <img
+          *ngIf="pointer == 4"
+          src="https://d8it4huxumps7.cloudfront.net/uploads/images/d2c-images/number-race-icon.svg"
+        /> -->
+      </div>
+      <div></div>
+    </div>
+
+    <div class="my_btn">
+      <div class="fa fa-long-arrow-left waves-effect" (click)="onClick('left')"></div>
+      <div class="fa fa-long-arrow-right waves-effect" (click)="onClick('right')"></div>
+    </div>
+  </div>
+</div>
+
+<!-- OLD DESIGN -->
+<!-- <h2>Level :{{ level }}</h2>
+<h3>Target Number:{{ sum }}</h3>
+<div class="col-sm-12">
+  <div class="row">
+    <div
+      *ngFor="let in of counter(6); let i = index"
+      style="width: 15%; padding-left: 15px;"
+    >
+      <div *ngFor="let in of arr; let j = index">
+        <div
+          *ngIf="i == 0"
+          style="width: 40px; height: 40px;"
+          class="btn btn-secondary m-1"
+          data-toggle="tooltip"
+          data-placement="top"
+        >
+          <p>{{ in }}</p>
+        </div>
+
+        <div *ngIf="i > 0 && i < 5">
+          <div
+            *ngIf="xaxis != i || yaxis != j"
+            style="width: 40px; height: 40px; color: white;"
+            class="btn m-1"
+            data-toggle="tooltip"
+            data-placement="top"
+          >
+            <p>{{ movingnumber }}</p>
+          </div>
+          <div
+            *ngIf="xaxis == i && yaxis == j"
+            style="width: 40px; height: 40px;"
+            class="btn btn-primary m-1"
+            data-toggle="tooltip"
+            data-placement="top"
+          >
+            <p>{{ movingnumber }}</p>
+          </div>
+        </div>
+
+        <div
+          *ngIf="i == 5"
+          style="width: 40px; height: 40px;"
+          class="btn btn-secondary m-1"
+          data-toggle="tooltip"
+          data-placement="top"
+        >
+          <p>{{ arr2[j] }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="col-sm-12">
+  <div class="row">
+    <div style="width: 15%; padding-left: 20px;">
+      <h1 hidden>A</h1>
+    </div>
+    <div style="width: 15%; padding-left: 20px;">
+      <i *ngIf="pointer == 1" class="fa fa-hand-o-up fa-3x"></i>
+    </div>
+    <div style="width: 15%; padding-left: 20px;">
+      <i *ngIf="pointer == 2" class="fa fa-hand-o-up fa-3x"></i>
+    </div>
+    <div style="width: 15%; padding-left: 20px;">
+      <i *ngIf="pointer == 3" class="fa fa-hand-o-up fa-3x"></i>
+    </div>
+    <div style="width: 15%; padding-left: 20px;">
+      <i *ngIf="pointer == 4" class="fa fa-hand-o-up fa-3x"></i>
+    </div>
+    <div style="width: 15%; padding-left: 20px;">
+    </div>
+  </div>
+</div>
+
+<div class="col-lg-12 col-md-12 col-sm-12">
+  <div class="row">
+    <div style="width: 50%;" (click)="onClick('left')">
+      <i class="fa fa-arrow-circle-left fa-3x"></i>
+    </div>
+    <div style="width: 50%;" (click)="onClick('right')">
+      <i class="fa fa-arrow-circle-right fa-3x"></i>
+    </div>
+  </div>
+</div> -->

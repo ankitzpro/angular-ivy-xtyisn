@@ -1,0 +1,40 @@
+<div class="d-flex" *ngIf="!stepOne">
+  <div>
+    <h1>Memory Cards</h1>
+    <p>Press the <strong>“Right key”</strong> to continue</p>
+  </div>
+
+  <div>
+    <img
+      alt="Memory Cards"
+      src="https://d8it4huxumps7.cloudfront.net/uploads/images/d2c-images/memory-cards.gif"
+    />
+  </div>
+
+  <div>
+    <button class="waves-effect" (click)="goToFirstStep()">
+      Next <i class="fa fa-long-arrow-right"></i>
+    </button>
+  </div>
+</div>
+
+<!-- STEP1 -->
+<div class="d-flex" *ngIf="stepOne">
+  <p class="cptn">
+    Memorize the sequence in which<br> the boxes appear on your screen and then tap
+    on those boxes in the same order.
+  </p>
+
+  <div>
+    <img
+      alt="Memory Cards"
+      src="https://d8it4huxumps7.cloudfront.net/uploads/images/d2c-images/memory-cards.gif"
+    />
+  </div>
+
+  <div>
+    <button class="waves-effect" (click)="onSubmit()">
+      Start <i class="fa fa-long-arrow-right"></i>
+    </button>
+  </div>
+</div>

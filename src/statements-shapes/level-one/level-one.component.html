@@ -1,0 +1,126 @@
+<div class="d-flex timer_box" *ngIf="!showQuestion">
+  <!-- <p class="cptn">
+    {{ text }}
+  </p> -->
+
+  <!-- <div class="timer">
+    {{ startCountDown }}
+  </div> -->
+  <div class="timer">
+    Next round will starts in
+    <div>{{ startCountDown }}</div>
+  </div>
+
+  <!-- <div></div> -->
+</div>
+
+<div class="d-flex" *ngIf="showQuestion">
+  <div>
+    <!-- <div class="bar_box">
+      <div
+        class="bar"
+        [ngStyle]="{ 'width.%': timmerCountDown * 20 }"
+      ></div>
+    </div> -->
+
+    <div class="bar_sect">
+      <div class="bar_box">
+        <div class="bar" [ngStyle]="{ 'width.%': timmerCountDown * 20 }"></div>
+      </div>
+      <div class="operator">{{ timmerCountDown.toFixed(0) }}</div>
+    </div>
+
+    <div class="label">
+      <!-- Question <strong>{{ questionOn }}</strong> -->
+      State whether the following statement<br />
+      is <strong class="true">true</strong> or
+      <strong class="false">false</strong>.
+    </div>
+    <!-- <div class="label">
+      <div title="Level">
+        3<span>/{{ level }}</span>
+        <p>Level</p>
+      </div>
+      <p class="card__name">Question {{ questionOn }}</p>
+      <div class="score" title="Score">
+        {{ score }}<span>/5</span>
+        <p>Score</p>
+      </div>
+    </div> -->
+  </div>
+
+  <div>
+    <div class="question">{{ question }} ?</div>
+    <div class="shape" [ngStyle]="{ color: color }">
+      <span class="circle" *ngIf="shape == 'circle'">&#9675;</span>
+      <span *ngIf="shape == 'square'">&#9633;</span>
+    </div>
+  </div>
+
+  <div class="btn_box">
+    <a
+      class="fa fa-times"
+      href="javascript:void(0)"
+      (click)="result('FALSE')"
+    ></a>
+    <a
+      href="javascript:void(0)"
+      class="fa fa-check"
+      (click)="result('TRUE')"
+    ></a>
+  </div>
+</div>
+
+<!-- OLD DESIGN -->
+<!-- <div class="container">
+  <div class="row">
+    <div class="card col-lg-4 col-md-4 col-sm-4" *ngIf="!showQuestion">
+      <p class="card__name">{{ text }}</p>
+      <p class="card__name">
+        Game Start In
+      </p>
+      <p class="startCountDown">{{ startCountDown }}</p>
+    </div>
+    <div class="card col-lg-4 col-md-4 col-sm-4" *ngIf="showQuestion">
+      <div class="middle">
+        <div class="bar-container">
+          <div
+            class="bar-5"
+            [ngStyle]="{ 'width.%': timmerCountDown * 20 }"
+          ></div>
+        </div>
+      </div>
+      <div class="flex">
+        <h5>
+          <span>Level {{ level }} </span>&nbsp;&nbsp;<span
+            style="padding-right: 2rem;"
+            >Score {{ score }}/5</span
+          >
+        </h5>
+      </div>
+      <p class="card__name">Question {{ questionOn }}</p>
+      <p class="shape" [ngStyle]="{ color: color }">
+        <span *ngIf="shape == 'circle'">&#9675;</span>
+        <span *ngIf="shape == 'square'" style="font-size: 150px;">&#9633;</span>
+      </p>
+
+      <p class="card__name">{{ question }} ?</p>
+      <div class="button-div">
+        <a
+          href="javascript:void(0)"
+          class="button4"
+          style="background-color: #f14e4e;"
+          (click)="result('FALSE')"
+          ><span style="font-size: 24px;">&#10008;</span></a
+        >
+        <a
+          href="javascript:void(0)"
+          class="button4"
+          style="background-color: #f1bb4e;"
+          (click)="result('TRUE')"
+          ><span style="font-size: 24px;">&#10004;</span></a
+        >
+      </div>
+    </div>
+  </div>
+</div> -->

@@ -1,0 +1,20 @@
+<section>
+  <div class="main_sect">
+    <div class="bg_box">
+      <ng-container *ngIf="composh == 'Start'">
+        <start></start>
+      </ng-container>
+
+      <ng-container *ngIf="composh == 'Cards'">
+        <cards></cards>
+      </ng-container>
+
+      <ng-container *ngIf="composh == 'Timer'">
+        <timer></timer>
+      </ng-container>
+      <ng-container *ngIf="composh == 'Finish'">
+        <finish></finish>
+      </ng-container>
+    </div>
+  </div>
+</section>

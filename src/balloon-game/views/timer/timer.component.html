@@ -1,0 +1,32 @@
+<div class="pdng">
+  <div class="timer">
+    <ng-container *ngIf="levels == 0">
+      Game starts in...
+    </ng-container>
+    <ng-container *ngIf="levels > 0">
+      Next round will starts in
+    </ng-container>
+    <div>{{ seconds }}</div>
+  </div>
+</div>
+
+
+<!-- <div *ngIf="levels>0" class="pdng">
+  <div class="ans correct">
+    <i class="fa fa-check" aria-hidden="true"></i>
+    {{ anstext }}
+  </div>
+  <div class="timer">{{ seconds }}</div>
+</div> -->
+
+<!-- <div *ngIf="levels==0" class="d-flex">
+  <p class="cptn">
+    Guess the percentage of the aquarium filled. The final score will depend upon how accurate you are  </p>
+
+  <div class="ftimer">
+    Game starts in...
+    <div>{{seconds}}</div>
+  </div>
+
+  <div></div>
+</div> -->

@@ -1,0 +1,82 @@
+<div class="pdng">
+  <div class="label">
+    <!-- <div>
+      3<span>/{{ level }}</span>
+      <p>
+        Level
+      </p>
+    </div> -->
+    <div>
+      {{ seconds }}
+      <p>
+        Time
+      </p>
+    </div>
+  </div>
+
+  <div>
+    <div class="icon">
+      <div class="fa" [ngClass]="a" *ngFor="let a of arr; let i = index"></div>
+    </div>
+
+    <div class="bg">
+      <div class="shape up"></div>
+      <div class="shape down"></div>
+      <div class="number">
+        <div class="item" (click)="selectAns(1)">
+          <div *ngFor="let x of ansar1; let d = index">{{ x }}</div>
+        </div>
+        <div class="item" (click)="selectAns(2)">
+          <div *ngFor="let y of ansar2; let e = index">{{ y }}</div>
+        </div>
+        <div class="item" (click)="selectAns(3)">
+          <div *ngFor="let z of ansar3; let f = index">{{ z }}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="icon">
+      <div class="fa" [ngClass]="b" *ngFor="let b of arr2; let j = index"></div>
+    </div>
+  </div>
+</div>
+
+
+<!-- <div class="pdng">
+  <div class="label">
+    <div>
+      3<span>/{{ level }}</span>
+      <p>
+        Level
+      </p>
+    </div>
+    <div>
+      {{ seconds.toFixed(1) }}
+      <p>
+        Time
+      </p>
+    </div>
+  </div>
+
+  <div>
+    <div class="icon">
+      <div class="fa" [ngClass]="a" *ngFor="let a of arr; let i = index"></div>
+    </div>
+
+    <div class="number">
+      <div class="item" (click)="selectAns(1)">
+        <div *ngFor="let x of ansar1; let d = index">{{ x }}</div>
+      </div>
+      <div class="item" (click)="selectAns(2)">
+        <div *ngFor="let y of ansar2; let e = index">{{ y }}</div>
+      </div>
+      <div class="item" (click)="selectAns(3)">
+        <div *ngFor="let z of ansar3; let f = index">{{ z }}</div>
+      </div>
+    </div>
+
+    <div class="icon">
+      <div class="fa" [ngClass]="b" *ngFor="let b of arr2; let j = index"></div>
+    </div>
+  </div>
+</div> -->

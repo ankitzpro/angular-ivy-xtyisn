@@ -1,0 +1,419 @@
+.pdng {
+  // padding: 20px 20px 50px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: calc(100vh - 30px);
+  @media (max-width: 600px) {
+    min-height: calc(100vh - 20px);
+    padding: 15px;
+  }
+}
+
+.label {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+  div {
+    width: 70px;
+    height: 70px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 26px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: #f8e8e7;
+    color: #bc271a;
+    box-shadow: 0px 0px 10px rgba(188, 39, 26, 0.1);
+    border: 1px solid rgba(188, 39, 26, 0.15);
+    p {
+      height: 30px;
+      position: absolute;
+      bottom: -36px;
+      width: 100%;
+      margin: 0;
+      background: #bc271a;
+      color: #ffffff;
+      font-size: 13px;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5px;
+      box-shadow: 0px 0px 5px rgba(23, 110, 222, 0.2);
+      transition: 0.3s;
+      &:before {
+        content: "";
+        position: absolute;
+        top: -4px;
+        right: 0;
+        height: 8px;
+        width: 8px;
+        transform: rotate(45deg);
+        background: #bc271a;
+        box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.14);
+        border-radius: 3px 0 0 0;
+        left: 0;
+        margin: auto;
+      }
+    }
+    &:hover {
+      p {
+        display: flex;
+      }
+    }
+    span {
+      font-size: 20px;
+      margin-top: 4px;
+    }
+  }
+}
+
+.box {
+  display: flex;
+  .left_sect {
+    background: #ffffff;
+    border: 1px solid #176ede;
+    box-sizing: border-box;
+    box-shadow: 0px 2px 5px rgba(23, 110, 222, 0.3);
+    border-radius: 8px;
+    width: 120px;
+    overflow: hidden;
+    .my_bg {
+      background: #ffa300;
+      position: relative;
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: url(https://d8it4huxumps7.cloudfront.net/uploads/images/d2c-images/accuracy-aquarium-icon.svg);
+        width: 73px;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        right: 0;
+        margin: auto;
+      }
+    }
+  }
+  .right_sect {
+    width: calc(100% - 120px);
+    padding-left: 30px;
+    text-align: left;
+    min-height: calc(100vh - 162px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  // .round {
+  //   font-size: 16px;
+  //   line-height: 26px;
+  //   color: #484848;
+  //   span {
+  //     font-size: 22px;
+  //   }
+  // }
+  .question {
+    font-size: 18px;
+    line-height: 24px;
+    color: #484848;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+  .input_box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    input {
+      border: 1px solid #9e9e9e;
+      box-sizing: border-box;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 14px;
+      color: #484848;
+      height: 45px;
+      display: inline-flex;
+      align-items: center;
+      padding: 0px 12px;
+      width: calc(100% - 35px);
+      margin-right: 10px;
+      transition: 0.3s;
+      &:focus {
+        outline: none;
+        box-shadow: 0px 2px 5px rgba(23, 110, 222, 0.3);
+        border-color: #176ede;
+      }
+    }
+    span {
+      color: #9e9e9e;
+      font-size: 26px;
+      width: 25px;
+    }
+  }
+
+  .number {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: -7px;
+    div {
+      box-shadow: 0px 2px 5px rgba(23, 110, 222, 0.3);
+      background: #ffffff;
+      border: 2px solid #176ede;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 26px;
+      color: #176ede;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 62px;
+      width: 62px;
+      margin: 7px;
+      cursor: pointer;
+      transition: 0.3s;
+      &:hover {
+        background: #176ede;
+        color: #fff;
+      }
+    }
+    .submit,
+    .wrong {
+      color: #fff;
+      font-size: 30px;
+      button {
+        border: inherit;
+        background: inherit;
+        color: inherit;
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+    .submit {
+      background: #3b8524;
+      box-shadow: 0px 2px 5px rgba(59, 133, 36, 0.3);
+      border-color: #3b8524;
+      &:hover {
+        background: #3b8524;
+        box-shadow: 0px 0px 20px rgba(59, 133, 36, 0.3);
+      }
+    }
+    .wrong {
+      background: #bc271a;
+      box-shadow: 0px 2px 5px rgba(188, 39, 26, 0.3);
+      border-color: #bc271a;
+      &:hover {
+        background: #bc271a;
+        box-shadow: 0px 0px 20px rgba(188, 39, 26, 0.3);
+      }
+    }
+  }
+}
+
+
+
+
+.bubbles{
+	background-color: rgba(255, 255, 255, 0.4);
+	border-radius: 50%;
+	height: 20px;
+	width: 20px;
+	position: absolute;
+	left: 10%;
+	bottom: -20px;
+}
+.b0{
+	animation-name:bubbles;
+	animation-delay:2s;
+	animation-duration:4s;
+	animation-iteration-count:infinite;
+	animation-timing-function: linear;
+}
+@keyframes bubbles{
+	from{
+		top:260px;
+		left:33px;
+	}
+	50%{
+		left:39px;
+	}
+	to{
+		top:0px;
+		left:33px;
+	}
+}
+@-moz-keyframes bubbles{
+	from{
+		top:260px;
+		left:33px;
+	}
+	50%{
+		left:39px;
+	}
+	to{
+		top:0px;
+		left:33px;
+	}
+}
+@-webkit-keyframes bubbles{
+	from{
+		top:260px;
+		left:33px;
+	}
+	50%{
+		left:39px;
+	}
+	to{
+		top:0px;
+		left:33px;
+	}
+}
+
+
+
+.b1{
+	animation-name:bubbles1;
+	animation-duration:7s;
+	animation-iteration-count:infinite;
+  animation-timing-function: linear;
+  left: auto;
+  right: 20px;
+}
+@keyframes bubbles1{
+	from{
+		top:260px;
+	}
+	to{
+		top:0px;
+	}
+}
+@-moz-keyframes bubbles1{
+	from{
+		top:260px;
+	}
+	to{
+		top:0px;
+	}
+}
+@-webkit-keyframes bubbles1{
+	from{
+		top:260px;
+	}
+	to{
+		top:0px;
+	}
+}
+
+.b2{
+	animation-name:bubbles2;
+	animation-delay:2s;
+	animation-duration:6s;
+	animation-iteration-count:infinite;
+	animation-timing-function: linear;
+}
+@keyframes bubbles2{
+	from{
+		top:260px;
+	}
+	to{
+		top:0px;
+	}
+}
+@-moz-keyframes bubbles2{
+	from{
+		top:260px;
+	}
+	to{
+		top:0px;
+	}
+}
+@-webkit-keyframes bubbles2{
+	from{
+		top:260px;
+	}
+	to{
+		top:0px;
+	}
+}
+
+.b3{
+	animation-name:bubbles3;
+	animation-delay:7s;
+	animation-duration:7s;
+	animation-iteration-count:infinite;
+  animation-timing-function: linear;
+  left:60px;
+}
+@keyframes bubbles3{
+	from{
+		top:260px;
+		left:60px;
+	}
+	25%{
+		left:30px;
+	}
+	50%{
+		left:58px;
+	}
+	75%{
+		left:37px;
+	}
+	to{
+		top:0px;
+		left:60px;
+	}
+}
+@-moz-keyframes bubbles3{
+	from{
+		top:260px;
+		left:60px;
+	}
+	25%{
+		left:30px;
+	}
+	50%{
+		left:58px;
+	}
+	75%{
+		left:37px;
+	}
+	to{
+		top:0px;
+		left:60px;
+	}
+}
+@-webkit-keyframes bubbles3{
+	from{
+		top:260px;
+		left:60px;
+	}
+	25%{
+		left:30px;
+	}
+	50%{
+		left:58px;
+	}
+	75%{
+		left:37px;
+	}
+	to{
+		top:0px;
+		left:60px;
+	}
+}
+
+
+// OLD DESIGN
+// .row {
+//   display: flex;
+//   justify-content: center;
+// }
+
+// .inputfield {
+//   height: 50px !important;
+//   width: 150px !important;
+// }

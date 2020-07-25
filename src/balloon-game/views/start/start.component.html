@@ -1,0 +1,46 @@
+<div class="d-flex" *ngIf="!stepOne">
+  <div>
+    <h1>Balloon Pump</h1>
+    <p>Press the <strong>“Right key”</strong> to continue</p>
+  </div>
+
+  <div>
+    <img
+      alt="image"
+      src="https://d8it4huxumps7.cloudfront.net/uploads/images/d2c-images/balloon-green.svg"
+    />
+  </div>
+
+  <div>
+    <button class="waves-effect" (click)="goToFirstStep()">
+      Start <i class="fa fa-long-arrow-right"></i>
+    </button>
+  </div>
+</div>
+
+<!-- STEP1 -->
+<div class="d-flex" *ngIf="stepOne">
+  <p class="cptn">
+    The aim of this game is to earn as much points as possible. To earn points
+    click on the buttons below the balloon. Your temporarily earned points can
+    be seen inside the balloon. To permanently collect these points click on
+    "Collect" button once you are sure that the balloon cannot hold any more
+    air. Each balloon has a different explosion point which keep on changing
+    throughout the game. If your balloon explodes before you click on "Collect"
+    you loose all the temporary points for that round.
+  </p>
+
+  <div>
+    <img
+      alt="image"
+      src="https://d8it4huxumps7.cloudfront.net/uploads/images/d2c-images/balloon-blue.svg"
+      class="step_img"
+    />
+  </div>
+
+  <div>
+    <button class="waves-effect" (click)="onSubmit()">
+      Next <i class="fa fa-long-arrow-right"></i>
+    </button>
+  </div>
+</div>

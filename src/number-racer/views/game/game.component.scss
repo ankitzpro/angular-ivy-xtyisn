@@ -1,0 +1,154 @@
+.pdng {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: calc(100vh - 30px);
+  @media (max-width: 600px) {
+    padding: 15px;
+    min-height: calc(100vh - 20px);
+  }
+}
+
+.label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  strong {
+    font-size: 19px;
+    color: #484848;
+    font-weight: 600;
+  }
+  div {
+    width: 70px;
+    height: 70px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 26px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #3b8524;
+    box-shadow: 0px 2px 5px rgba(59, 133, 36, 0.3);
+    color: #fff;
+  }
+}
+
+.number {
+  display: flex;
+  .list {
+    border-right: 1px solid rgba(189, 189, 189, 0.3);
+    width: 16.666%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &:last-child {
+      border-right: 0;
+    }
+    div {
+      width: 45px;
+      height: 45px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 20px;
+      color: #ffffff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 15px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    .number_bg {
+      background: #bdbdbd;
+    }
+    .value_bg {
+      background: #ebf0fc;
+      color: #176ede;
+    }
+    .slide_bg {
+      background: #176ede;
+      box-shadow: 0px 2px 5px rgba(26, 73, 186, 0.3);
+    }
+  }
+}
+
+.slide {
+  display: flex;
+  div {
+    width: 16.666%;
+  }
+  // img {
+  //   width: 100%;
+  //   display: block;
+  // }
+  .icon {
+    background-image: url(https://d8it4huxumps7.cloudfront.net/uploads/images/d2c-images/number-race-icon.svg);
+    width: 100%;
+    background-size: 100%;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-position: top;
+  }
+}
+
+.my_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  div {
+    background: #176ede;
+    box-shadow: 0px 2px 5px rgba(26, 73, 186, 0.3);
+    border-radius: 8px;
+    height: 60px;
+    width: 60px;
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    margin-right: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+    &:last-child {
+      margin-right: 0;
+    }
+    &:hover {
+      transform: scale(1.15);
+    }
+  }
+}
+
+.waves-effect:not(.no-hover) {
+  position: relative;
+  overflow: hidden;
+  z-index: 9;
+  transition: 0.3s;
+  &:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    width: 0%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    // background: #176ede;
+    background: rgba(0, 0, 0, 0.2);
+  }
+  &:hover {
+    color: #fff !important;
+    &:after {
+      width: 100%;
+    }
+  }
+}
+button {
+  &:focus {
+    outline: none;
+  }
+}

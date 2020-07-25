@@ -1,0 +1,18 @@
+<section>
+  <div class="main_sect">
+    <div class="bg_box">
+      <div *ngIf="composh == 'Start'">
+        <start></start>
+      </div>
+      <div *ngIf="composh == 'Game'">
+        <game></game>
+      </div>
+      <div *ngIf="composh == 'Timer'">
+        <timer></timer>
+      </div>
+      <div *ngIf="composh == 'Finish'">
+        <finish></finish>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,201 @@
+<div class="pdng">
+  <div class="label">
+    <!-- <div>
+      15<span>/{{ level }}</span>
+      <p>Level</p>
+    </div> -->
+    <div>
+      {{ seconds.toFixed(0) }}
+      <p>Time</p>
+    </div>
+  </div>
+
+  <div class="box">
+    <div class="left_sect">
+      <div [ngStyle]="{ height: whitespace + '%' }"></div>
+      <div class="my_bg" [ngStyle]="{ height: progress + '%' }">
+        <div class="bubbles b0"></div>
+        <div class="bubbles b1"></div>
+        <div class="bubbles b2"></div>
+        <div class="bubbles b3"></div>
+      </div>
+    </div>
+
+    <div class="right_sect">
+      <!-- <div class="round">Round: <span>2</span>/3</div> -->
+      <div class="question">
+        How much do you think the tank is filled?
+      </div>
+
+      <div class="input_box">
+        <input
+          type="text"
+          maxlength="2"
+          [(ngModel)]="numstring"
+          placeholder="How much?"
+          numbersOnly
+          (input)="insertNum($event.target.value)"
+        />
+        <span>%</span>
+      </div>
+
+      <div class="number">
+        <div (click)="insertChar('1')">
+          1
+        </div>
+        <div (click)="insertChar('2')">
+          2
+        </div>
+        <div (click)="insertChar('3')">
+          3
+        </div>
+        <div (click)="insertChar('4')">
+          4
+        </div>
+        <div (click)="insertChar('5')">
+          5
+        </div>
+        <div (click)="insertChar('6')">
+          6
+        </div>
+        <div (click)="insertChar('7')">
+          7
+        </div>
+        <div (click)="insertChar('8')">
+          8
+        </div>
+        <div (click)="insertChar('9')">
+          9
+        </div>
+        <div class="wrong">
+          <button (click)="clear()" class="fa fa-times"></button>
+        </div>
+        <div (click)="insertChar('0')">
+          0
+        </div>
+        <div class="submit">
+          <button type="submit" (click)="submit()" class="fa fa-check"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- OLD CODE -->
+<!-- <div class="row">
+  <div style="width: 50%;">
+    <h2>Level : {{ level }}</h2>
+  </div>
+  <div style="width: 50%;" class="text-danger">
+    <h2>{{ seconds.toFixed(1) }}</h2>
+  </div>
+</div>
+<hr />
+<div class="col-sm-12">
+  <div class="row" style="height: 450px;">
+    <div style="width: 75%; height: 100%; margin: 2px;">
+      <div style="height: 25%;">
+        <input
+          type="text"
+          maxlength="2"
+          class="inputfield"
+          [(ngModel)]="numstring"
+          placeholder="%"
+          numbersOnly
+          (input)="insertNum($event.target.value)"
+        />
+      </div>
+      <div class="row" style="height: 60%;">
+        <div
+          style="width: 50px; height: 50px; font-size: 22px;"
+          (click)="insertChar('1')"
+          class="btn btn-info m-2"
+        >
+          1
+        </div>
+        <div
+          style="width: 50px; height: 50px; font-size: 22px;"
+          (click)="insertChar('2')"
+          class="btn btn-info m-2"
+        >
+          2
+        </div>
+        <div
+          style="width: 50px; height: 50px; font-size: 22px;"
+          (click)="insertChar('3')"
+          class="btn btn-info m-2"
+        >
+          3
+        </div>
+        <div
+          style="width: 50px; height: 50px; font-size: 22px;"
+          (click)="insertChar('4')"
+          class="btn btn-info m-2"
+        >
+          4
+        </div>
+        <div
+          style="width: 50px; height: 50px; font-size: 22px;"
+          (click)="insertChar('5')"
+          class="btn btn-info m-2"
+        >
+          5
+        </div>
+        <div
+          style="width: 50px; height: 50px; font-size: 22px;"
+          (click)="insertChar('6')"
+          class="btn btn-info m-2"
+        >
+          6
+        </div>
+        <div
+          style="width: 50px; height: 50px; font-size: 22px;"
+          (click)="insertChar('7')"
+          class="btn btn-info m-2"
+        >
+          7
+        </div>
+        <div
+          style="width: 50px; height: 50px; font-size: 22px;"
+          (click)="insertChar('8')"
+          class="btn btn-info m-2"
+        >
+          8
+        </div>
+        <div
+          style="width: 50px; height: 50px; font-size: 22px;"
+          (click)="insertChar('9')"
+          class="btn btn-info m-2"
+        >
+          9
+        </div>
+        <div
+          style="width: 50px; height: 50px; font-size: 22px;"
+          (click)="insertChar('0')"
+          class="btn btn-info m-2"
+        >
+          0
+        </div>
+      </div>
+      <div style="height: 15%;">
+        <button type="submit" (click)="submit()" class="btn btn-lg btn-primary">
+          Submit
+        </button>
+      </div>
+    </div>
+    <div
+      style="width: 20%; height: 100%; border: 1px solid black; margin: 2px;"
+    >
+      <div
+        class="bg-light"
+        style="width: 100%;"
+        [ngStyle]="{ height: whitespace + '%' }"
+      ></div>
+      <div
+        class="bg-primary"
+        style="width: 100%;"
+        [ngStyle]="{ height: progress + '%' }"
+      ></div>
+    </div>
+  </div>
+</div> -->

@@ -1,0 +1,17 @@
+<section>
+  <div class="main_sect">
+    <div class="bg_box">
+      <!-- <h1>Swipe Game</h1> -->
+
+      <blank *ngIf="composh == 'Blank'"></blank>
+      <finish *ngIf="composh == 'Finish'"></finish>
+      <one *ngIf="composh == 'One'"></one>
+      <two *ngIf="composh == 'Two'"></two>
+      <timer *ngIf="composh == 'Timer'"></timer>
+      <question
+        *ngIf="composh == 'Question'"
+        [parentSubject]="parentSubject"
+      ></question>
+    </div>
+  </div>
+</section>

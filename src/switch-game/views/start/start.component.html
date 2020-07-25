@@ -1,0 +1,60 @@
+<div class="d-flex" *ngIf="!stepOne">
+  <div>
+    <h1>Switch Challenge</h1>
+    <p>Press the <strong>“Right key”</strong> to continue</p>
+  </div>
+
+  <!-- <div class="icon">
+    <div>
+      <i class="fa fa-square"></i>
+      <i class="fa fa-circle"></i>
+    </div>
+    <div>
+      <i class="fa fa-play"></i>
+      <i class="fa fa-plus"></i>
+    </div>
+  </div> -->
+  <div>
+    <img
+      src="https://d8it4huxumps7.cloudfront.net/uploads/images/d2c-images/switch-challenge.gif"
+      alt="Switch Challenge"
+    />
+  </div>
+
+  <div>
+    <button class="waves-effect" (click)="goToFirstStep()">
+      Start <i class="fa fa-long-arrow-right"></i>
+    </button>
+  </div>
+</div>
+
+<!-- STEP1 -->
+<div class="d-flex" *ngIf="stepOne">
+  <p class="cptn">
+    Choose one of the sequences in the middle to determine the correct reorder
+    of the symbols to make the Upper row match the Lower row
+  </p>
+
+  <!-- <div class="icon">
+    <div>
+      <i class="fa fa-square"></i>
+      <i class="fa fa-circle"></i>
+    </div>
+    <div>
+      <i class="fa fa-play"></i>
+      <i class="fa fa-plus"></i>
+    </div>
+  </div> -->
+  <div>
+    <img
+      src="https://d8it4huxumps7.cloudfront.net/uploads/images/d2c-images/switch-challenge.gif"
+      alt="Switch Challenge"
+    />
+  </div>
+
+  <div>
+    <button class="waves-effect" (click)="onSubmit()">
+      Next <i class="fa fa-long-arrow-right"></i>
+    </button>
+  </div>
+</div>
