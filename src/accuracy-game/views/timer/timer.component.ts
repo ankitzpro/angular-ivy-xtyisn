@@ -17,6 +17,7 @@ intervalId: number = 0;
 message: string = '';
 seconds: number = 5;
 levels=this.service.level;
+score=this.service.score;
   ngOnInit() {
 this.anstext=this.service.anstext;
 this.countDown();
@@ -25,7 +26,7 @@ this.countDown();
     this.intervalId = window.setInterval(() => {
       this.seconds -= 1;
       if (this.seconds === 0 ) {
-        if(this.service.level>=10){
+        if(this.service.level>=12){
          // this.routers.navigate(['/start'],{ skipLocationChange: true })
          this.service.changeCompo('Finish');
         }
