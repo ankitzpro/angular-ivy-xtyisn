@@ -22,7 +22,7 @@ seconds: number = 5;
 score=0;
 data:any;
 totanswers=[];
-  text="Compare the 2 words and decide whether there meaning is almost the same, almost the opposite, or they have another relationship";
+  text="Compare the 2 words and decide whether their meaning is almost the same, almost the opposite, or they have another relationship";
    quesarray=[{'difficulty':2,'seconds':12},
     {'difficulty':1,'seconds':12},
     {'difficulty':1,'seconds':12},
@@ -38,7 +38,7 @@ totanswers=[];
 
   changetext(){
     this.text="If they have the same meaning, swipe left. For almost opposites, swipe right. For all other words pairs, swipe down";
-  
+
   }
 
   // question(){
@@ -82,18 +82,18 @@ totanswers=[];
   clearTimer() { clearInterval(this.intervalId); }
 
   getAnswer(eventtext){
-    switch(eventtext) { 
-          case 'left': { 
+    switch(eventtext) {
+          case 'left': {
             this.anstext=this.answer=='Almost the same' ? 'Correct Answer' : 'Incorrect Answer';
-             break; 
-          } 
-          case 'right': { 
+             break;
+          }
+          case 'right': {
             this.anstext=this.answer=='Almost the Opposite' ? 'Correct Answer' : 'Incorrect Answer';
-            break; 
-         } case 'down': { 
+            break;
+         } case 'down': {
           this.anstext=this.answer=='Totally Unrelated' ? 'Correct Answer' : 'Incorrect Answer';
-          break; 
-          } 
+          break;
+          }
        }
        if(this.anstext=='Correct Answer'){
          //this.score=this.score+this.seconds;

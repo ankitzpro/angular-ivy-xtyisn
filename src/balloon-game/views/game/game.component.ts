@@ -22,7 +22,7 @@ export class GameComponent implements OnInit {
   randomcolor='';
   colorsarray=['red','blue','green'];
   localscore=0;
-  wid=20;
+  wid=80;
   boomhide=false;
   btnshow=false;
     ngOnInit() {
@@ -47,6 +47,7 @@ export class GameComponent implements OnInit {
         this.service.level=this.service.level+1;
       this.service.changeCompo('Timer');
         }
+      // }, 100000000000);
       }, 10);
     }
   }

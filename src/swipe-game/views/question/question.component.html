@@ -6,11 +6,12 @@
         Level
       </p>
     </div> -->
+    Time remaining
     <div>
       {{ seconds.toFixed(0) }}
-      <p>
+      <!-- <p>
         Time
-      </p>
+      </p> -->
     </div>
   </div>
   <!-- <div>
@@ -59,15 +60,15 @@
   </div>
 
   <div class="my_btn">
-    <button>
+    <button (click)="startAnimation('swipeleft');clicked('left')">
       <i class="fa fa-long-arrow-left"></i>
       Opposite
     </button>
-    <button class="arrow-down">
+    <button class="arrow-down" (click)="startAnimation('swipedown');clicked('down')">
       <i class="fa fa-long-arrow-down"></i>
       Other
     </button>
-    <button>
+    <button (click)="startAnimation('swiperight');clicked('right')">
       <i class="fa fa-long-arrow-right"></i>
       Same
     </button>

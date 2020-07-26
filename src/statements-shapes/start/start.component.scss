@@ -25,6 +25,9 @@ img {
   width: 250px;
   display: block;
   margin: auto;
+  @media (max-width: 600px) {
+    width: 100%;
+  }
 }
 
 button {
@@ -86,9 +89,8 @@ button {
   color: #484848;
   margin: 0 0 20px 0;
   @media (max-width: 600px) {
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 600;
+    font-size: 17px;
+    line-height: 25px;
   }
 }
 .move {

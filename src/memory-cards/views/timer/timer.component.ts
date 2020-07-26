@@ -14,7 +14,7 @@ intervalId: number = 0;
 message: string = '';
 seconds: number = 5;
 levels:number;
-
+score=this.service.score;
   ngOnInit() {
     this.levels=this.service.level;
     console.log(this.levels);

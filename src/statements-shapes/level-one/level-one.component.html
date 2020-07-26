@@ -7,7 +7,7 @@
     {{ startCountDown }}
   </div> -->
   <div class="timer">
-    Next round will starts in
+    Next round will start in
     <div>{{ startCountDown }}</div>
   </div>
 
@@ -23,14 +23,22 @@
       ></div>
     </div> -->
 
-    <div class="bar_sect">
+    <!-- <div class="bar_sect">
       <div class="bar_box">
         <div class="bar" [ngStyle]="{ 'width.%': timmerCountDown * 20 }"></div>
       </div>
       <div class="operator">{{ timmerCountDown.toFixed(0) }}</div>
-    </div>
+    </div> -->
 
     <div class="label">
+      Time remaining
+      <div>
+        {{ timmerCountDown.toFixed(0) }}
+      </div>
+    </div>
+
+
+    <div class="info">
       <!-- Question <strong>{{ questionOn }}</strong> -->
       State whether the following statement<br />
       is <strong class="true">true</strong> or

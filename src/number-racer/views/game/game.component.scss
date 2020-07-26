@@ -12,25 +12,24 @@
 
 .label {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
-  strong {
-    font-size: 19px;
-    color: #484848;
-    font-weight: 600;
-  }
+  font-size: 19px;
+  color: #3b8524;
+  font-weight: 600;
   div {
-    width: 70px;
-    height: 70px;
+    width: 56px;
+    height: 56px;
     border-radius: 8px;
     font-weight: 600;
-    font-size: 26px;
+    font-size: 30px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     background: #3b8524;
     box-shadow: 0px 2px 5px rgba(59, 133, 36, 0.3);
     color: #fff;
+    margin-left: 20px;
   }
 }
 

@@ -38,9 +38,6 @@ export class LevelThreeComponent implements OnInit {
   }
   ngOnDestroy() {
     this.clearTimer();
-    this.service.l1_score=0;
-    this.service.l2_score=0;
-    this.service.l3_score=0;
   }
   getQuestion(){
     this.clearTimer();
@@ -69,6 +66,7 @@ export class LevelThreeComponent implements OnInit {
       if( this.userAnswer == this.answer){
         this.notifier.notify("success","Question "+this.questionOn + " is Correct Answer");
         this.service.l3_score++;
+        this.service.score++;
         this.service.totanswers.push(1);
         this.score = this.service.l3_score;
         this.getQuestion();

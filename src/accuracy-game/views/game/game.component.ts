@@ -59,8 +59,8 @@ export class GameComponent  {
 
         this.service.changeCompo('Timer');
       }
-    }, 100);
-    // }, 500000000000000);
+    // }, 100);
+    }, 500000000000000);
   }
 
   submit() {

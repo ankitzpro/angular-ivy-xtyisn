@@ -55,9 +55,9 @@ export class LevelOneComponent implements OnInit {
     }else if(!this.thirdInput){
       this.thirdInput = character;
     }
-    if(this.firstInput && this.secondInput && this.thirdInput){
-      this.result();
-    }
+    // if(this.firstInput && this.secondInput && this.thirdInput){
+    //   this.result();
+    // }
   }
 
   getRhs() {
@@ -95,6 +95,9 @@ export class LevelOneComponent implements OnInit {
   l1_countDown() {
     this.showtimer=true;
     this.intervalId = setTimeout(() => {
+      if(this.firstInput && this.secondInput && this.thirdInput){
+        this.result();
+      }
       this.service.question++
             this.question_no++;
             this.service.changeCompo('Timer');
@@ -140,6 +143,7 @@ export class LevelOneComponent implements OnInit {
           if(this.lhs == this.rhs){
              this.question_no++;
                     this.service.l1_score++;
+                    this.service.score++;
                     this.service.totanswers.push(1);
                     this.l1_score = this.service.l1_score;
                     // this.service.showAlert("Correct Answer! Click OK For Next Question");

@@ -1,6 +1,6 @@
-<section>
+<section (swipe)="onSwipe($event)">
   <div class="main_sect">
-    <div class="bg_box">
+    <div class="bg_box" (swipe)="onSwipe($event)">
       <!-- <h1>Swipe Game</h1> -->
 
       <blank *ngIf="composh == 'Blank'"></blank>
@@ -10,7 +10,7 @@
       <timer *ngIf="composh == 'Timer'"></timer>
       <question
         *ngIf="composh == 'Question'"
-        [parentSubject]="parentSubject"
+        [parentSubject]="parentSubject" (clickkey)='clickOrswipe($event)'
       ></question>
     </div>
   </div>

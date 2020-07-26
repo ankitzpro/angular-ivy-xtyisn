@@ -19,13 +19,7 @@ score=0;
 
   clearTimer() { clearInterval(this.intervalId); }
 
-  scoreCalc(text){
-
-    this.anstext=text;
-       if(this.anstext=='Level Passed \n Correct Answer'){
-         this.score=this.score+this.seconds;
-       }
-  }
+  
   levelupgrade(){
     if(this.totanswers.length>1){
       this.seconds=10;

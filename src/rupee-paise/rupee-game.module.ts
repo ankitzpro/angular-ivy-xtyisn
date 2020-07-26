@@ -1,10 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AppComponent } from 'src/app/app.component';
 import { LevelOneComponent } from './level-one/level-one.component';
 import { LevelTwoComponent } from './level-two/level-two.component';
 import { LevelThreeComponent } from './level-three/level-three.component';
-import { BrowserModule } from '@angular/platform-browser';
 import { NotifierModule } from 'angular-notifier';
 import { RupeePaiseComponent } from './rupee-paise.component';
 import { FinishComponent } from './finish/finish.component';
@@ -23,7 +21,6 @@ import { StartComponent } from './start/start.component';
     StartComponent
   ],
   imports: [
-    BrowserModule,
     CommonModule,
     NotifierModule.withConfig({
       position: {

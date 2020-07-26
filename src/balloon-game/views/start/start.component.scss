@@ -3,9 +3,15 @@
   justify-content: space-between;
   min-height: calc(100vh - 30px);
   padding: 30px;
+  &.step {
+    padding: 20px;
+  }
   @media (max-width: 600px) {
     min-height: calc(100vh - 20px);
     padding: 20px;
+    &.step {
+      padding: 15px;
+    }
   }
 }
 h1 {
@@ -26,6 +32,9 @@ img {
   max-width: 80%;
   display: block;
   margin: auto;
+  @media (max-width: 600px) {
+    max-width: 100%;
+  }
 }
 
 button {
@@ -93,5 +102,5 @@ button {
 }
 
 .step_img {
-  width: 50%;
+  width: 60%;
 }

@@ -15,4 +15,8 @@ this.text=this.serv.text;
 this.serv.pageno=2;
   }
 
+  next(){
+    this.serv.compoChange('Timer')
+  }
+
 }

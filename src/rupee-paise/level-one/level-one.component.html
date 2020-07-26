@@ -1,48 +1,221 @@
-<div class="container">
-    <div class="row">
+<div class="d-flex timer_box" *ngIf="!showQuestion">
+  <div class="timer">
+    Next round will start in
+    <div>{{ startCountDown }}</div>
+  </div>
+</div>
+
+<div class="d-flex" *ngIf="showQuestion">
+  <div>
+    <div class="label">
+      Time remaining
+      <div>
+        {{ timmerCountDown }}
+        <!-- <p>
+          Time
+        </p> -->
+      </div>
+    </div>
+
+    <div class="cptn">
+      <div>
+        Billing Amount <span>₹ {{ billing_amount }}</span>
+      </div>
+      <div>Paid Amount <span>₹ 10</span></div>
+    </div>
+
+    <div class="quest">
+      Return the exact change
+    </div>
+  </div>
+
+  <div>
+    <div class="amount">
+      <div>
+        <button (click)="remove('fifty_rupees')">
+          50 <i class="fa fa-rupee"></i>
+        </button>
+        <span>{{ fifty_rupees.length }} <em>Qty.</em></span>
+      </div>
+
+      <div>
+        <button (click)="remove('twenty_rupees')">
+          20 <i class="fa fa-rupee"></i>
+        </button>
+        <span>{{ twenty_rupees.length }} <em>Qty.</em></span>
+      </div>
+
+      <div>
+        <button (click)="remove('ten_rupees')">
+          10 <i class="fa fa-rupee"></i>
+        </button>
+        <span>{{ ten_rupees.length }} <em>Qty.</em></span>
+      </div>
+
+      <div>
+        <button (click)="remove('five_rupees')">
+          5 <i class="fa fa-rupee"></i>
+        </button>
+        <span>{{ five_rupees.length }} <em>Qty.</em></span>
+      </div>
+
+      <div>
+        <button (click)="remove('two_rupees')">
+          2 <i class="fa fa-rupee"></i>
+        </button>
+        <span>{{ two_rupees.length }} <em>Qty.</em></span>
+      </div>
+
+      <div>
+        <button (click)="remove('one_rupees')">
+          1 <i class="fa fa-rupee"></i>
+        </button>
+        <span>{{ one_rupees.length }} <em>Qty.</em></span>
+      </div>
+    </div>
+
+    <div class="amount">
+      <div>
+        <button (click)="remove('one_paise')">1 <i class="paise">P.</i></button>
+        <span>{{ one_paise.length }} <em>Qty.</em></span>
+      </div>
+
+      <div>
+        <button (click)="remove('two_paise')">2 <i class="paise">P.</i></button>
+        <span>{{ two_paise.length }} <em>Qty.</em></span>
+      </div>
+
+      <div>
+        <button (click)="remove('five_paise')">5 <i class="paise">P.</i></button>
+        <span>{{ five_paise.length }} <em>Qty.</em></span>
+      </div>
+
+      <div>
+        <button (click)="remove('ten_paise')">10 <i class="paise">P.</i></button>
+        <span>{{ ten_paise.length }} <em>Qty.</em></span>
+      </div>
+
+      <div>
+        <button (click)="remove('twenty_paise')">
+          20 <i class="paise">P.</i>
+        </button>
+        <span>{{ twenty_paise.length }} <em>Qty.</em></span>
+      </div>
+
+      <div>
+        <button (click)="remove('twentyfive_paise')">
+          25 <i class="paise">P.</i>
+        </button>
+        <span>{{ twentyfive_paise.length }} <em>Qty.</em></span>
+      </div>
+
+      <div>
+        <button (click)="remove('fifty_paise')">50 <i class="paise">P.</i></button>
+        <span>{{ fifty_paise.length }} <em>Qty.</em></span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="btn_box">
+    <a class="clear" href="javascript:void(0)" (click)="refillNotes()">Clear</a>
+    <a href="javascript:void(0)" (click)="checkAnswer(userAnswer)">Submit</a>
+    <!-- <a
+      class="fa fa-times"
+      href="javascript:void(0)"
+      (click)="refillNotes()"
+    ></a>
+    <a
+      href="javascript:void(0)"
+      class="fa fa-check"
+      (click)="checkAnswer(userAnswer)"
+    ></a> -->
+  </div>
+</div>
+<!-- <notifier-container></notifier-container> -->
+
+<!-- OLD DESIGN -->
+<!-- <div class="container">
+  <div class="row">
     <div class="card col-lg-4 col-md-4 col-sm-4" *ngIf="!showQuestion">
       <p class="card__name">Game</p>
-        <p class="card__name">
-          Game Start In
-        </p>
-        <p class="startCountDown">{{startCountDown}}</p>
-  
+      <p class="card__name">
+        Game Start In
+      </p>
+      <p class="startCountDown">{{ startCountDown }}</p>
     </div>
     <div class="card col-lg-4 col-md-4 col-sm-4" *ngIf="showQuestion">
-      <!-- <div class="middle">
-        <div class="bar-container">
-          <div class="bar-5" [ngStyle]="{'width.%':timmerCountDown * 5}"></div>
-        </div>
-      </div> -->
-      <h3>{{timmerCountDown}}</h3>
-      <h3>Billing Amount ₹ {{billing_amount}} </h3>
+      <h3>{{ timmerCountDown }}</h3>
+      <h3>Billing Amount ₹ {{ billing_amount }}</h3>
       <h3>Paid Amount ₹ 10</h3>
       <div style="text-align: center;">Available Rupees</div>
-      <div style="width: 100%;display: flex;margin: 20px;">
-            <button (click)="remove('fifty_rupees')" class="btn btn-primary ml-1">50 * <sup>{{fifty_rupees.length}}</sup></button>
-            <button (click)="remove('twenty_rupees')" class="btn btn-primary ml-1">20 * <sup>{{twenty_rupees.length}}</sup></button>
-            <button (click)="remove('ten_rupees')" class="btn btn-primary ml-1">10 * <sup>{{ten_rupees.length}}</sup></button>
-            <button (click)="remove('five_rupees')" class="btn btn-primary ml-1">5 * <sup>{{five_rupees.length}}</sup></button>
-            <button (click)="remove('two_rupees')" class="btn btn-primary ml-1">2 * <sup>{{two_rupees.length}}</sup></button>
-            <button (click)="remove('one_rupees')" class="btn btn-primary ml-1">1 * <sup>{{one_rupees.length}}</sup></button>
+      <div style="width: 100%; display: flex; margin: 20px;">
+        <button (click)="remove('fifty_rupees')" class="btn btn-primary ml-1">
+          50 * <sup>{{ fifty_rupees.length }}</sup>
+        </button>
+        <button (click)="remove('twenty_rupees')" class="btn btn-primary ml-1">
+          20 * <sup>{{ twenty_rupees.length }}</sup>
+        </button>
+        <button (click)="remove('ten_rupees')" class="btn btn-primary ml-1">
+          10 * <sup>{{ ten_rupees.length }}</sup>
+        </button>
+        <button (click)="remove('five_rupees')" class="btn btn-primary ml-1">
+          5 * <sup>{{ five_rupees.length }}</sup>
+        </button>
+        <button (click)="remove('two_rupees')" class="btn btn-primary ml-1">
+          2 * <sup>{{ two_rupees.length }}</sup>
+        </button>
+        <button (click)="remove('one_rupees')" class="btn btn-primary ml-1">
+          1 * <sup>{{ one_rupees.length }}</sup>
+        </button>
       </div>
       <div style="text-align: center;">Available Paise</div>
       <div style="display: flex; margin: 20px;">
-        <button  (click)="remove('one_paise')" class="btn btn-primary ml-1">1 * <sup>{{one_paise.length}}</sup></button>
-        <button  (click)="remove('two_paise')" class="btn btn-primary ml-1">2 * <sup>{{two_paise.length}}</sup></button>
-        <button  (click)="remove('five_paise')" class="btn btn-primary ml-1">5 * <sup>{{five_paise.length}}</sup></button>
+        <button (click)="remove('one_paise')" class="btn btn-primary ml-1">
+          1 * <sup>{{ one_paise.length }}</sup>
+        </button>
+        <button (click)="remove('two_paise')" class="btn btn-primary ml-1">
+          2 * <sup>{{ two_paise.length }}</sup>
+        </button>
+        <button (click)="remove('five_paise')" class="btn btn-primary ml-1">
+          5 * <sup>{{ five_paise.length }}</sup>
+        </button>
       </div>
       <div style="display: flex; margin: 5px;">
-        <button  (click)="remove('ten_paise')" class="btn btn-primary ml-1">10 * <sup>{{ten_paise.length}}</sup></button>
-        <button  (click)="remove('twentyfive_paise')" class="btn btn-primary ml-1">25 * <sup>{{twentyfive_paise.length}}</sup></button>
-        <button  (click)="remove('twenty_paise')" class="btn btn-primary ml-1">20 * <sup>{{twenty_paise.length}}</sup></button>
-        <button  (click)="remove('fifty_paise')" class="btn btn-primary ml-1">50 * <sup>{{fifty_paise.length}}</sup></button>
+        <button (click)="remove('ten_paise')" class="btn btn-primary ml-1">
+          10 * <sup>{{ ten_paise.length }}</sup>
+        </button>
+        <button
+          (click)="remove('twentyfive_paise')"
+          class="btn btn-primary ml-1"
+        >
+          25 * <sup>{{ twentyfive_paise.length }}</sup>
+        </button>
+        <button (click)="remove('twenty_paise')" class="btn btn-primary ml-1">
+          20 * <sup>{{ twenty_paise.length }}</sup>
+        </button>
+        <button (click)="remove('fifty_paise')" class="btn btn-primary ml-1">
+          50 * <sup>{{ fifty_paise.length }}</sup>
+        </button>
       </div>
       <div class="button-div">
-        <a href="javascript:void(0)" class="button4" style="background-color:#f14e4e" (click)="refillNotes()"><span style="font-size: 24px;">&#10008;</span></a>
-        <a href="javascript:void(0)" class="button4" style="background-color:#f1bb4e" (click)="checkAnswer(userAnswer)"><span style="font-size: 24px;">&#10004;</span></a>
-    </div>
+        <a
+          href="javascript:void(0)"
+          class="button4"
+          style="background-color: #f14e4e;"
+          (click)="refillNotes()"
+          ><span style="font-size: 24px;">&#10008;</span></a
+        >
+        <a
+          href="javascript:void(0)"
+          class="button4"
+          style="background-color: #f1bb4e;"
+          (click)="checkAnswer(userAnswer)"
+          ><span style="font-size: 24px;">&#10004;</span></a
+        >
+      </div>
     </div>
   </div>
-  </div>
-  <notifier-container></notifier-container>
+</div>
+<notifier-container></notifier-container> -->

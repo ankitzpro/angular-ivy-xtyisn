@@ -22,9 +22,12 @@ p {
 }
 
 img {
-  width: 80%;
+  width: 90%;
   display: block;
   margin: auto;
+  @media (max-width: 600px) {
+    width: 100%;
+  }
 }
 
 button {

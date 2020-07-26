@@ -13,7 +13,7 @@ intervalId: number = 0;
 message: string = '';
 seconds: number = 5;
 levels=this.service.level;
-
+score=this.service.score;
   ngOnInit() {
 this.anstext=this.service.anstext;
 this.countDown();

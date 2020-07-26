@@ -7,14 +7,14 @@
 
     <div></div> -->
   <div class="timer">
-    Next round will starts in
+    Next round will start in
     <div>{{ timmer }}</div>
   </div>
 </div>
 
 <div class="d-flex" *ngIf="showQuestion">
   <div>
-    <div class="bar_sect">
+    <!-- <div class="bar_sect">
       <div class="bar_box">
         <div
           class="bar"
@@ -22,7 +22,15 @@
         ></div>
       </div>
       <div class="operator">{{ seconds.toFixed(0) }}</div>
+    </div> -->
+
+    <div class="label">
+      Time remaining
+      <div>
+        {{ seconds.toFixed(0) }}
+      </div>
     </div>
+
 
     <!-- <div class="label">
         <div>
@@ -35,7 +43,7 @@
           <p>Score</p>
         </div>
       </div> -->
-    <div class="label">
+    <div class="info">
       <!-- Question <strong>{{ question_no }}</strong> -->
       Complete the following equation.
     </div>

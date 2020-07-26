@@ -44,7 +44,7 @@ export class LevelOneComponent implements OnInit {
   notifier: NotifierService;
   constructor(
     private service: RupeePaiseService,
-    notifierService: NotifierService) { 
+    notifierService: NotifierService) {
       this.notifier = notifierService;
     }
   ngOnInit() {
@@ -65,7 +65,7 @@ export class LevelOneComponent implements OnInit {
         clearInterval(countDownId);
         this.getQuestion();
         // this.service.showAlert("satrt");
-      } 
+      }
     }, 1000);
   }
   getQuestion(){
@@ -92,7 +92,7 @@ export class LevelOneComponent implements OnInit {
       }
       this.refillNotes();
       this.getQuestion();
-      
+
     }else{
       this.notifier.notify("error","Incorrect Answer!");
       this.countDown();
@@ -170,7 +170,9 @@ export class LevelOneComponent implements OnInit {
             this.myfunction();
             this.notifier.notify("warning","Not Attempted");
             this.countDown();
+            // this.seconds=2000;
             this.seconds=20;
+        // }, 2000000);
         }, 20000);
       }
   myfunction(){clearInterval(this.timerDownId);}
@@ -183,9 +185,9 @@ export class LevelOneComponent implements OnInit {
       if ((this.timmerCountDown).toFixed(1) == '0.0') {
         this.service.customConsole(this.timmerCountDown);
         clearInterval(this.timerDownId);
-        } 
+        }
     }, 1000);
     this.timmerCountDown = 20;
-    
+
   }
 }

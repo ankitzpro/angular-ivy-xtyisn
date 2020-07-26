@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
@@ -13,7 +12,7 @@ import { Step2Component } from './views/step2/step2.component';
 
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule,CommonModule],
+  imports:      [  FormsModule,CommonModule],
   declarations: [ MainComponent ,StartComponent,
     GameComponent
     ,TimerComponent,FinishComponent, Step1Component, Step2Component],

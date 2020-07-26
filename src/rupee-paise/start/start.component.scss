@@ -3,6 +3,9 @@
   justify-content: space-between;
   min-height: calc(100vh - 30px);
   padding: 30px;
+  &.step {
+    padding: 20px;
+  }
   @media (max-width: 600px) {
     min-height: calc(100vh - 20px);
     padding: 20px;
@@ -11,29 +14,30 @@
 h1 {
   font-size: 28px;
   line-height: 32px;
-  color: #000;
+  color: #fff;
   margin: 0;
 }
 p {
   font-size: 16px;
   line-height: 22px;
-  color: #484848;
+  color: #fff;
   margin: 10px 0 0;
 }
 
 img {
-  width: 250px;
   display: block;
   margin: auto;
+  max-width: 90%;
 }
 
+
 button {
-  background: #3b8524;
-  box-shadow: 0px 0 10px rgba(59, 133, 36, 0.4);
+  background: #ffffff;
+  box-shadow: 0px 0px 10px rgba(16, 16, 16, 0.4);
   border-radius: 8px;
   height: 45px;
   font-size: 16px;
-  color: #fff;
+  color: #176ede;
   display: inline-flex;
   width: 130px;
   align-items: center;
@@ -65,10 +69,10 @@ button {
     top: 0;
     left: 0;
     // background: #176ede;
-    background: rgba(0, 0, 0, 0.2)
+    background: rgba(25, 115, 235, 0.1);
   }
   &:hover {
-    color: #fff !important;
+    // color: #fff !important;
     &:after {
       width: 100%;
     }
@@ -76,56 +80,13 @@ button {
 }
 
 
-
-
-
-// STEP1
+// Step1
 .cptn {
-  font-size: 22px;
-  line-height: 32px;
-  color: #484848;
-  margin: 0 0 20px 0;
+  font-size: 19px;
+  line-height: 27px;
+  margin: 0;
   @media (max-width: 600px) {
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 600;
-  }
-}
-.move {
-  div {
-    font-size: 16px;
-    color: #484848;
-    margin: auto;
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    &:last-child {
-      margin-bottom: 0;
-    }
-    strong {
-      font-weight: 600;
-    }
-  }
-  i {
-    width: 30px;
-    height: 30px;
-    background: #3b8524;
-    box-shadow: 0px 2px 5px rgba(59, 133, 36, 0.3);
-    border-radius: 5px;
-    color: #fff;
-    font-size: 14px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 20px;
-    &.fa-times {
-      background: #bc271a;
-      box-shadow: 0px 2px 5px rgba(188, 39, 26, 0.3);
-    }
-  }
-  span {
-    width: calc(100% - 50px);
-    text-align: left;
+    font-size: 17px;
+    line-height: 25px;
   }
 }

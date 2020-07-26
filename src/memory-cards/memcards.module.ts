@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
 
 import { MemcardsComponent } from './memcards.component';
@@ -17,7 +16,6 @@ import { Step1Component } from './views/step1/step1.component';
 
 @NgModule({
   imports:      [  FormsModule,
-    BrowserAnimationsModule,
     CommonModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule ],

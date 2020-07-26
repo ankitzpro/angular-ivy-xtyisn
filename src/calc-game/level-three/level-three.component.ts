@@ -54,9 +54,9 @@ export class LevelThreeComponent implements OnInit {
     }else if(!this.thirdInput){
       this.thirdInput = character;
     }
-    if(this.firstInput && this.secondInput && this.thirdInput){
-      this.result()
-    }
+    // if(this.firstInput && this.secondInput && this.thirdInput){
+    //   this.result()
+    // }
   }
   getRhs() { // min and max included
     this.clearTimer();
@@ -94,6 +94,9 @@ export class LevelThreeComponent implements OnInit {
   l3_countDown() {
     this.showtimer=true;
     this.intervalId = setTimeout(() => {
+      if(this.firstInput && this.secondInput && this.thirdInput){
+        this.result()
+      }
            this.question_no++;
             this.service.question++;
             this.clearTimer();
@@ -135,6 +138,7 @@ export class LevelThreeComponent implements OnInit {
           }
           if(this.lhs == this.rhs){
             this.service.l3_score++;
+            this.service.score++;
             this.l3_score = this.service.l3_score;
             this.service.totanswers.push(1);
             this.removeChar(1);

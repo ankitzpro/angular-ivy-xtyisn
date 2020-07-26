@@ -4,9 +4,10 @@
       30<span>/{{ level }}</span>
       <p>Level</p>
     </div> -->
+    Collect Number
     <div>
       {{ localscore }}
-      <p>Score</p>
+      <!-- <p>Score</p> -->
     </div>
   </div>
 
@@ -83,13 +84,52 @@
           'background-color': randomcolor
         }"
       ></span> -->
-    <img
+    <!-- <img
       [hidden]="!boomhide"
       width="250"
       height="250"
       alt="image"
-      src="https://d8it4huxumps7.cloudfront.net/uploads/images/d2c-images/balloon-pump.png"
-    />
+      src="https://d8it4huxumps7.cloudfront.net/uploads/images/d2c-images/balloon-blue-blast.svg"
+    /> -->
+
+    <div
+      *ngIf="randomcolor == 'blue'"
+      class="balloon_blast"
+      [hidden]="!boomhide"
+    >
+      <span>opps!</span>
+      <div
+        style="
+          background-image: url(https://d8it4huxumps7.cloudfront.net/uploads/images/d2c-images/balloon-blue-blast.svg);
+        "
+      ></div>
+    </div>
+
+    <div
+      *ngIf="randomcolor == 'green'"
+      class="balloon_blast"
+      [hidden]="!boomhide"
+    >
+      <span>opps!</span>
+      <div
+        style="
+          background-image: url(https://d8it4huxumps7.cloudfront.net/uploads/images/d2c-images/balloon-green-blast.svg);
+        "
+      ></div>
+    </div>
+
+    <div
+      *ngIf="randomcolor == 'red'"
+      class="balloon_blast"
+      [hidden]="!boomhide"
+    >
+      <span>opps!</span>
+      <div
+        style="
+          background-image: url(https://d8it4huxumps7.cloudfront.net/uploads/images/d2c-images/balloon-red-blast.svg);
+        "
+      ></div>
+    </div>
   </div>
 
   <div>

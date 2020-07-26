@@ -49,7 +49,7 @@ export class GameComponent implements OnInit {
 
     var b =
       Math.floor(Math.random() * (this.sum - 1)) + this.service.rangestart;
-    if (this.service.level > 5)
+    if (this.service.level > 7)
       b =
         Math.floor(Math.random() * this.service.rangeend) +
         this.service.rangestart;
@@ -57,8 +57,8 @@ export class GameComponent implements OnInit {
       var g =
         Math.floor(Math.random() * this.service.rangeend) +
         this.service.rangestart;
-      if (this.service.level > 5)
-        b =
+      if (this.service.level > 7)
+        g =
           Math.floor(Math.random() * this.service.rangeend) -
           this.service.rangestart;
       this.arr.push(g);
@@ -86,11 +86,9 @@ export class GameComponent implements OnInit {
         var ans = 0;
         for (var k = 0; k < _this.arr2.length; k++) ans = ans + _this.arr2[k];
         if (_this.sum == ans) {
-          _this.service.textMaker('You Win');
           _this.service.score++;
           _this.service.totanswers.push(1);
         } else {
-          _this.service.textMaker('You Lose');
         }
         // _this.routers.navigate(['/timer'],{ skipLocationChange: true });
         _this.service.changeCompo('Timer');

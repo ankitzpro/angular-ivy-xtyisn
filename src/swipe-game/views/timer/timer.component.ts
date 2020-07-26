@@ -13,6 +13,7 @@ export class TimerComponent implements OnInit {
   message: string = '';
   seconds: number = 5;
   levels = this.serv.i;
+  score=this.serv.score;
   ngOnInit() {
     this.anstext = this.serv.anstext;
     this.countDown();

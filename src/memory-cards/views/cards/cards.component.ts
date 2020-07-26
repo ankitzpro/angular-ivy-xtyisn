@@ -4,6 +4,7 @@ import {
   ElementRef,
   ViewChildren,
   QueryList,
+  Renderer2
 } from '@angular/core';
 import { CardService } from '../../card.service';
 
@@ -13,7 +14,7 @@ import { CardService } from '../../card.service';
   styleUrls: ['./cards.component.scss'],
 })
 export class CardsComponent implements OnInit {
-  constructor(private service: CardService) {}
+  constructor(private service: CardService,private renderer:Renderer2) {}
   level = this.service.level;
   arr = [];
   click = false;
@@ -48,23 +49,30 @@ export class CardsComponent implements OnInit {
 
     function myLoop() {
       setTimeout(function () {
-        const a = Math.floor(Math.random() * 29) + 0;
+        const a = Math.floor(Math.random() * 34) + 0;
         1;
 
         _this.arr.push(a);
         _this.components
           .toArray()
           [a].nativeElement.classList.add('btn-secondary');
+
+          _this.components.toArray()[a].nativeElement.innerHTML='<h3>'+_this.arr.length+'</h3>';
         setTimeout(() => {
           _this.components
             .toArray()
             [a].nativeElement.classList.remove('btn-secondary');
+
+          _this.components.toArray()[a].nativeElement.innerHTML='';
         }, 1000);
         j++;
         if (j < i) {
           myLoop();
         } else {
-          _this.startShow();
+          setTimeout(()=>{
+            _this.startShow();
+
+          },1500);
         }
       }, 2000);
     }
@@ -123,6 +131,11 @@ export class CardsComponent implements OnInit {
     this.showstart = true;
     setTimeout(() => {
       this.countDown();
+      for (var j = 0; j < this.components.toArray().length; j++) {
+        this.components
+          .toArray()
+          [j].nativeElement.classList.add('btn-hover');
+      }
     // }, 10000000000);
     }, 1000);
   }

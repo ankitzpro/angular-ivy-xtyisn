@@ -20,13 +20,7 @@ noofdigits=6;
 secperlevel=2000;
 secperdigit=300;
 totanswers=[];
-textMaker(text:string){
-  this.anstext=text;
 
-  if(this.level==10){
-  this.anstext='Your Final Score :'+this.score;
-  }
-}
 
 levelUpdate(){
   this.level++;

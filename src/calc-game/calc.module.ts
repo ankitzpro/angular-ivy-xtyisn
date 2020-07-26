@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -26,7 +26,6 @@ import { Step1Component } from './step1/step1.component';
     Step1Component
   ],
   imports: [
-    BrowserModule,
     ProgressBarModule,
     CommonModule,
     NotifierModule.withConfig({

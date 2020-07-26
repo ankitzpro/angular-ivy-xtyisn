@@ -59,9 +59,9 @@ export class LevelFourComponent implements OnInit {
     }else if(!this.thirdInput){
       this.thirdInput = character;
     }
-    if(this.firstInput && this.secondInput && this.thirdInput){
-      this.result();
-    }    
+    // if(this.firstInput && this.secondInput && this.thirdInput){
+    //   this.result();
+    // }    
   }
 
   getRhs() { // min and max included
@@ -99,6 +99,9 @@ export class LevelFourComponent implements OnInit {
   l4_countDown() {
     this.showtimer=true;
     this.intervalId = setTimeout(() => {
+     if(this.firstInput && this.secondInput && this.thirdInput){
+     this.result();
+    }  
             this.question_no++;
             this.service.question++;
             this.clearTimer();
@@ -141,6 +144,7 @@ export class LevelFourComponent implements OnInit {
             if(this.lhs == this.rhs){ 
               this.notifier.notify("success","Question "+this.question_no + " is Correct Answer");
                 this.service.l4_score++;
+                this.service.score++;
                 this.service.totanswers.push(1);
                 this.l4_score = this.service.l4_score;
                 // this.service.showAlert("Correct Answer! Click OK For Next Question");

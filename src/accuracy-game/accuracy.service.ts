@@ -14,7 +14,7 @@ compoShowValue='Start';
 anstext='';
 
 intervalId: number = 0;
-seconds: number = 10;
+seconds: number = 8;
 score=0;
 diff=0;
   clearTimer() { clearInterval(this.intervalId); }

@@ -1,4 +1,4 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, OnInit,Input ,EventEmitter, Output} from '@angular/core';
 import { MyserviceService} from '../../myservice.service'
 import { trigger, keyframes, animate, transition } from "@angular/animations";
 import * as swp from '../../swipe';
@@ -26,7 +26,8 @@ parentSubject: Subject<any>;
 
 animationState: string;
 
-
+@Output() clickkey = new EventEmitter();
+clk='up';
 seconds= this.serv.seconds;
 i=this.serv.i;
 tot=this.serv.quesarray.length
@@ -60,5 +61,10 @@ this.countDown();
   resetAnimationState(state) {
     this.animationState = '';
   }
+  clicked(abc:string) { 
+    this.clk=abc;
+    this.clickkey.emit(this.clk);
+
+}
 
 }

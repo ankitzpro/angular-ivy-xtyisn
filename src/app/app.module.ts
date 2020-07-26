@@ -11,7 +11,7 @@ import { AccuracyModule } from '../accuracy-game/accuracy.module';
 import { StatementModule } from '../statements-shapes/statement.module';
 import { CalcModule } from '../calc-game/calc.module';
 import { BalloonModule } from '../balloon-game/balloon.module';
-import { RupeeGameModule } from 'src/rupee-paise/rupee-game.module';
+import { RupeeGameModule } from '../rupee-paise/rupee-game.module';
 
 @NgModule({
   declarations: [AppComponent],

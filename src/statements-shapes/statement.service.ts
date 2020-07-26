@@ -12,7 +12,7 @@ export class StatementService {
   question=0;
   timersec=5;
   totanswers=[];
-  score=this.l1_score + this.l2_score + this.l3_score + this.l4_score;
+  score=0;
   compoShowValue='Start';
     private compoShow: BehaviorSubject<string> = new BehaviorSubject<string>(this.compoShowValue);
 

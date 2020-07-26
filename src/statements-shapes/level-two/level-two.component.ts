@@ -61,6 +61,7 @@ export class LevelTwoComponent implements OnInit {
     this.myfunction();
       if( this.userAnswer == this.answer){
         this.service.l2_score++;
+        this.service.score++;
         this.service.totanswers.push(1);
         this.score = this.service.l2_score;
         //this.getQuestion();
