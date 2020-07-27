@@ -4,6 +4,8 @@
   min-height: calc(100vh - 30px);
   // padding: 30px;
   padding: 15px;
+  position: relative;
+  z-index: 9;
   &.timer_box {
     justify-content: center;
     align-items: center;
@@ -17,7 +19,7 @@
 
 .timer {
   font-size: 18px;
-  color: #fff;
+  color: #101010;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -90,7 +92,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  color: #fff;
+  color: #bc271a;
   font-size: 18px;
   font-weight: 600;
   div {
@@ -151,108 +153,214 @@
 }
 
 .quest {
-  color: #fff;
+  color: #484848;
   font-size: 22px;
-  margin-top: 20px;
+  margin-bottom: 15px;
+  font-weight: 600;
+  @media (max-width: 600px) {
+    margin: 20px 0 10px;
+  }
 }
 
 .cptn {
-  margin-top: 15px;
+  margin-top: 20px;
   div {
     display: flex;
     justify-content: space-between;
-    color: rgba(255, 255, 255, 0.9);
+    color: #484848;
     font-size: 16px;
     font-weight: 600;
     margin-bottom: 5px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    padding-bottom: 5px;
     span {
-      color: #fff;
+      color: #176ede;
     }
     &:last-child {
       margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: 0;
     }
   }
 }
 
 .amount {
-  margin: -8px -2px;
-  div {
-    margin: 8px 2px;
-    width: calc(16.666% - 4px);
-    display: inline-flex;
-    flex-direction: column;
-  }
+  // div {
+  //   display: inline-flex;
+  //   flex-direction: column;
+  //   position: relative;
+  // }
   button {
-    background: #FFFFFF;
+    background: #fff;
     height: 62px;
-    border-radius: 8px;
+    border-radius: 50%;
     font-weight: 600;
-    font-size: 22px;
+    font-size: 20px;
     line-height: 26px;
-    color: #176EDE;
-    border: 2px solid;
+    color: #176ede;
+    border: 2px solid #176ede;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0px 2px 5px rgba(23, 110, 222, 0.3);
-    transition: .3s;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+    width: 62px;
+    margin: 10px;
+    position: relative;
     i {
       margin-left: 5px;
-      font-size: 19px;
-      margin-top: 5px;
+      font-size: 16px;
+      margin-top: 2px;
     }
     .paise {
       font-style: normal;
       margin-left: 2px;
-      font-size: 21px;
-      margin-top: 3px;
+      font-size: 18px;
+      margin-top: 1px;
     }
     &:hover {
-      color: #fff;
-      background: #176EDE;
+      color: #ffffff;
+      background: #176ede;
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
     }
   }
   span {
-    color: rgba(255, 255, 255, 0.85);
+    line-height: normal;
+    color: #484848;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: absolute;
+    top: -5px;
+    right: -12px;
+    width: 26px;
+    height: 26px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
     em {
       font-style: normal;
       font-size: 12px;
       margin-left: 2px;
+      display: none;
     }
   }
   @media (max-width: 600px) {
-    margin: -8px -1px;
-    div {
-      margin: 8px 1px;
-      width: calc(16.666% - 2px);
-      button {
-        height: 55px;
-        font-size: 19px;
-        i {
-          margin-left: 3px;
-          font-size: 17px;
-          margin-top: 3px;
-        }
-        .paise {
-          margin-left: 1px;
-          font-size: 18px;
-          margin-top: 1px;
-        }
-      }
+    button {
+      width: 60px;
+      height: 60px;
+      margin: 8px;
     }
-    span {
-      font-size: 16px;
-      em {
-        font-size: 11px;
-      }
-    }
+    // margin: -8px -1px;
+    // div {
+    //   margin: 8px 1px;
+    //   width: calc(16.666% - 2px);
+    //   button {
+    //     height: 55px;
+    //     font-size: 19px;
+    //     i {
+    //       margin-left: 3px;
+    //       font-size: 17px;
+    //       margin-top: 3px;
+    //     }
+    //     .paise {
+    //       margin-left: 1px;
+    //       font-size: 18px;
+    //       margin-top: 1px;
+    //     }
+    //   }
+    // }
+    // span {
+    //   font-size: 16px;
+    //   em {
+    //     font-size: 11px;
+    //   }
+    // }
   }
 }
+// .amount {
+//   margin: -10px -3px;
+//   div {
+//     margin: 10px 3px;
+//     width: calc(16.666% - 6px);
+//     display: inline-flex;
+//     flex-direction: column;
+//   }
+//   button {
+//     background: #176EDE;
+//     height: 62px;
+//     border-radius: 8px;
+//     font-weight: 600;
+//     font-size: 22px;
+//     line-height: 26px;
+//     color: #ffffff;
+//     border: 2px solid #176EDE;
+//     display: inline-flex;
+//     align-items: center;
+//     justify-content: center;
+//     box-shadow: 0px 2px 5px rgba(23, 110, 222, 0.3);
+//     transition: 0.3s;
+//     i {
+//       margin-left: 5px;
+//       font-size: 19px;
+//       margin-top: 5px;
+//     }
+//     .paise {
+//       font-style: normal;
+//       margin-left: 2px;
+//       font-size: 21px;
+//       margin-top: 3px;
+//     }
+//     &:hover {
+//       color: #176EDE;
+//       background: #fff;
+//     }
+//   }
+//   span {
+//     line-height: normal;
+//     color: #484848;
+//     font-weight: 600;
+//     font-size: 18px;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     margin-top: 3px;
+//     em {
+//       font-style: normal;
+//       font-size: 12px;
+//       margin-left: 2px;
+//     }
+//   }
+//   @media (max-width: 600px) {
+//     margin: -8px -1px;
+//     div {
+//       margin: 8px 1px;
+//       width: calc(16.666% - 2px);
+//       button {
+//         height: 55px;
+//         font-size: 19px;
+//         i {
+//           margin-left: 3px;
+//           font-size: 17px;
+//           margin-top: 3px;
+//         }
+//         .paise {
+//           margin-left: 1px;
+//           font-size: 18px;
+//           margin-top: 1px;
+//         }
+//       }
+//     }
+//     span {
+//       font-size: 16px;
+//       em {
+//         font-size: 11px;
+//       }
+//     }
+//   }
+// }
 
 .btn_box {
   a {
@@ -260,18 +368,17 @@
     border-radius: 8px;
     color: #fff;
     background: #3b8524;
-    box-shadow: 0px 2px 5px rgba(59, 133, 36, 0.3);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
     display: inline-flex;
     align-items: center;
     justify-content: center;
     font-size: 20px;
     transition: 0.3s;
-    border: 1px solid;
     padding: 0px 30px;
     font-weight: 600;
     &.clear {
       background: #bc271a;
-      box-shadow: 0px 2px 5px rgba(188, 39, 26, 0.3);
+      // box-shadow: 0px 2px 5px rgba(188, 39, 26, 0.3);
       margin-right: 15px;
     }
     // width: 75px;
@@ -293,7 +400,36 @@
     // }
     &:hover {
       text-decoration: none;
-      transform: scale(1.15);
+      // transform: scale(1.15);
+    }
+  }
+  @media (max-width: 600px) {
+    margin-top: 20px;
+  }
+}
+.waves-effect:not(.no-hover) {
+  position: relative;
+  overflow: hidden;
+  z-index: 9;
+  transition: 0.3s;
+  &:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    width: 0%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    // background: #176ede;
+    background: rgba(0, 0, 0, 0.2);
+  }
+  &:hover {
+    color: #fff !important;
+    &:after {
+      width: 100%;
     }
   }
 }
@@ -304,48 +440,37 @@ button {
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-// a.button4{
-//     display:inline-block;
-//     padding:0.3em 1.2em;
-//     margin:0 1.1em 0.1em 0;
-//     border:0.16em solid rgba(255,255,255,0);
-//     border-radius:2em;
-//     box-sizing: border-box;
-//     text-decoration:none;
-//     font-family:'Roboto',sans-serif;
-//     font-weight:300;
-//     color:#FFFFFF;
-//     text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
-//     text-align:center;
-//     transition: all 0.2s;
-//     }
-//     a.button4:hover{
-//      border-color: rgba(255,255,255,1);
-//     }
-// @media all and (max-width:30em){
-//      a.button4{
-//     display:block;
-//     margin:0.2em auto;
-//     }
-//     }
+// a.button4 {
+//   display: inline-block;
+//   padding: 0.3em 1.2em;
+//   margin: 0 1.1em 0.1em 0;
+//   border: 0.16em solid rgba(255, 255, 255, 0);
+//   border-radius: 2em;
+//   box-sizing: border-box;
+//   text-decoration: none;
+//   font-family: "Roboto", sans-serif;
+//   font-weight: 300;
+//   color: #ffffff;
+//   text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
+//   text-align: center;
+//   transition: all 0.2s;
+// }
+// a.button4:hover {
+//   border-color: rgba(255, 255, 255, 1);
+// }
+// @media all and (max-width: 30em) {
+//    a.button4 {
+//     display: block;
+//     margin: 0.2em auto;
+//   }
+// }
 // @import url("https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400;500&display=swap");
 
 // .container {
 //   justify-content: center;
 //   align-items: center;
-// //   height: 100vh;
 //   background-color: #f5f5f5;
-//   font-family: 'Baloo Paaji 2', cursive;
+//   font-family: "Baloo Paaji 2", cursive;
 // }
 
 // .card {
@@ -380,18 +505,17 @@ button {
 //   outline: 2px dotted #55d7dc;
 // }
 
-
-// .startCountDown{
-//     font-size: 50px;
+// .startCountDown {
+//   font-size: 50px;
 // }
-// .shape{
-//     font-weight: 900;
-//     font-size: 150px;
-//     text-align:center ;
+// .shape {
+//   font-weight: 900;
+//   font-size: 150px;
+//   text-align: center;
 // }
 
 // .middle {
-//   margin-top:10px;
+//   margin-top: 10px;
 //   float: left;
 //   width: 70%;
 // }
@@ -403,14 +527,15 @@ button {
 //   color: white;
 //   border-radius: 25px;
 // }
-// .bar-5 {height: 12px;
-//         background-color: #4CAF50;
-//         border-radius: 25px;
-//   }
+// .bar-5 {
+//   height: 12px;
+//   background-color: #4caf50;
+//   border-radius: 25px;
+// }
 
-// /* Responsive layout - make the columns stack on top of each other instead of next to each other */
 // @media (max-width: 400px) {
-//   .side, .middle {
+//   .side,
+//   .middle {
 //     width: 100%;
 //   }
 //   .right {

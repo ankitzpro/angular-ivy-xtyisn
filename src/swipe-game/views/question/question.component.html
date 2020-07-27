@@ -1,17 +1,23 @@
 <div class="pdng">
-  <div class="label">
-    <!-- <div>
+  <div>
+    <div class="label">
+      <!-- <div>
       {{ i }}<span>/{{ tot }}</span>
       <p>
         Level
       </p>
     </div> -->
-    Time remaining
-    <div>
-      {{ seconds.toFixed(0) }}
-      <!-- <p>
+      Time remaining
+      <div>
+        {{ seconds.toFixed(0) }}
+        <!-- <p>
         Time
       </p> -->
+      </div>
+    </div>
+    <div class="question">
+      Choose the most suitable option to <br>define the relationship between the
+      words given below.
     </div>
   </div>
   <!-- <div>
@@ -60,15 +66,18 @@
   </div>
 
   <div class="my_btn">
-    <button (click)="startAnimation('swipeleft');clicked('left')">
+    <button (click)="startAnimation('swipeleft'); clicked('left')">
       <i class="fa fa-long-arrow-left"></i>
       Opposite
     </button>
-    <button class="arrow-down" (click)="startAnimation('swipedown');clicked('down')">
+    <button
+      class="arrow-down"
+      (click)="startAnimation('swipedown'); clicked('down')"
+    >
       <i class="fa fa-long-arrow-down"></i>
       Other
     </button>
-    <button (click)="startAnimation('swiperight');clicked('right')">
+    <button (click)="startAnimation('swiperight'); clicked('right')">
       <i class="fa fa-long-arrow-right"></i>
       Same
     </button>

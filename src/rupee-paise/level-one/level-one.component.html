@@ -1,6 +1,8 @@
 <div class="d-flex timer_box" *ngIf="!showQuestion">
   <div class="timer">
-    Next round will start in
+    Score:{{ score }}
+    <br />
+    Next round will start in...
     <div>{{ startCountDown }}</div>
   </div>
 </div>
@@ -23,104 +25,163 @@
       </div>
       <div>Paid Amount <span>₹ 10</span></div>
     </div>
-
-    <div class="quest">
-      Return the exact change
-    </div>
   </div>
 
   <div>
-    <div class="amount">
-      <div>
-        <button (click)="remove('fifty_rupees')">
-          50 <i class="fa fa-rupee"></i>
-        </button>
-        <span>{{ fifty_rupees.length }} <em>Qty.</em></span>
-      </div>
-
-      <div>
-        <button (click)="remove('twenty_rupees')">
-          20 <i class="fa fa-rupee"></i>
-        </button>
-        <span>{{ twenty_rupees.length }} <em>Qty.</em></span>
-      </div>
-
-      <div>
-        <button (click)="remove('ten_rupees')">
-          10 <i class="fa fa-rupee"></i>
-        </button>
-        <span>{{ ten_rupees.length }} <em>Qty.</em></span>
-      </div>
-
-      <div>
-        <button (click)="remove('five_rupees')">
-          5 <i class="fa fa-rupee"></i>
-        </button>
-        <span>{{ five_rupees.length }} <em>Qty.</em></span>
-      </div>
-
-      <div>
-        <button (click)="remove('two_rupees')">
-          2 <i class="fa fa-rupee"></i>
-        </button>
-        <span>{{ two_rupees.length }} <em>Qty.</em></span>
-      </div>
-
-      <div>
-        <button (click)="remove('one_rupees')">
-          1 <i class="fa fa-rupee"></i>
-        </button>
-        <span>{{ one_rupees.length }} <em>Qty.</em></span>
-      </div>
+    <div class="quest">
+      Return the exact change
     </div>
 
     <div class="amount">
-      <div>
-        <button (click)="remove('one_paise')">1 <i class="paise">P.</i></button>
-        <span>{{ one_paise.length }} <em>Qty.</em></span>
-      </div>
+      <!-- <div> -->
+      <button (click)="remove('fifty_rupees')">
+        50 <i class="fa fa-rupee"></i>
+        <span title="Quantity">
+          {{ fifty_rupees.length }}
+          <!-- <em>Qty.</em> -->
+        </span>
+      </button>
+      <!-- </div> -->
 
-      <div>
-        <button (click)="remove('two_paise')">2 <i class="paise">P.</i></button>
-        <span>{{ two_paise.length }} <em>Qty.</em></span>
-      </div>
+      <!-- <div> -->
+      <button (click)="remove('twenty_rupees')">
+        20 <i class="fa fa-rupee"></i>
+        <!-- <span>{{ twenty_rupees.length }} <em>Qty.</em></span> -->
+        <span title="Quantity">
+          {{ twenty_rupees.length }}
+          <!-- <em>Qty.</em> -->
+        </span>
+      </button>
+      <!-- </div> -->
 
-      <div>
-        <button (click)="remove('five_paise')">5 <i class="paise">P.</i></button>
-        <span>{{ five_paise.length }} <em>Qty.</em></span>
-      </div>
+      <!-- <div> -->
+      <button (click)="remove('ten_rupees')">
+        10 <i class="fa fa-rupee"></i>
+        <!-- <span>{{ ten_rupees.length }} <em>Qty.</em></span> -->
+        <span title="Quantity">
+          {{ ten_rupees.length }}
+          <!-- <em>Qty.</em> -->
+        </span>
+      </button>
+      <!-- </div> -->
 
-      <div>
-        <button (click)="remove('ten_paise')">10 <i class="paise">P.</i></button>
-        <span>{{ ten_paise.length }} <em>Qty.</em></span>
-      </div>
+      <!-- <div> -->
+      <button (click)="remove('five_rupees')">
+        5 <i class="fa fa-rupee"></i>
+        <!-- <span>{{ five_rupees.length }} <em>Qty.</em></span> -->
+        <span title="Quantity">
+          {{ five_rupees.length }}
+          <!-- <em>Qty.</em> -->
+        </span>
+      </button>
+      <!-- </div>/ -->
 
-      <div>
-        <button (click)="remove('twenty_paise')">
-          20 <i class="paise">P.</i>
-        </button>
-        <span>{{ twenty_paise.length }} <em>Qty.</em></span>
-      </div>
+      <!-- <div> -->
+      <button (click)="remove('two_rupees')">
+        2 <i class="fa fa-rupee"></i>
+        <!-- <span>{{ two_rupees.length }} <em>Qty.</em></span> -->
+        <span title="Quantity">
+          {{ two_rupees.length }}
+          <!-- <em>Qty.</em> -->
+        </span>
+      </button>
+      <!-- </div> -->
 
-      <div>
-        <button (click)="remove('twentyfive_paise')">
-          25 <i class="paise">P.</i>
-        </button>
-        <span>{{ twentyfive_paise.length }} <em>Qty.</em></span>
-      </div>
+      <!-- <div> -->
+      <button (click)="remove('one_rupees')">
+        1 <i class="fa fa-rupee"></i>
+        <!-- <span>{{ one_rupees.length }} <em>Qty.</em></span> -->
+        <span title="Quantity">
+          {{ one_rupees.length }}
+          <!-- <em>Qty.</em> -->
+        </span>
+      </button>
+      <!-- </div> -->
+    </div>
 
-      <div>
-        <button (click)="remove('fifty_paise')">50 <i class="paise">P.</i></button>
-        <span>{{ fifty_paise.length }} <em>Qty.</em></span>
-      </div>
+    <div class="amount">
+      <!-- <div> -->
+      <button (click)="remove('fifty_paise')">
+        50 <i class="paise">P.</i>
+        <!-- <span>{{ fifty_paise.length }} <em>Qty.</em></span> -->
+        <span title="Quantity">
+          {{ fifty_paise.length }}
+          <!-- <em>Qty.</em> -->
+        </span>
+      </button>
+      <!-- </div> -->
+
+      <!-- <div> -->
+      <button (click)="remove('twentyfive_paise')">
+        25 <i class="paise">P.</i>
+        <!-- <span>{{ twentyfive_paise.length }} <em>Qty.</em></span> -->
+        <span title="Quantity">
+          {{ twentyfive_paise.length }}
+          <!-- <em>Qty.</em> -->
+        </span>
+      </button>
+      <!-- </div> -->
+
+      <!-- <div> -->
+      <button (click)="remove('twenty_paise')">
+        20 <i class="paise">P.</i>
+        <!-- <span>{{ twenty_paise.length }} <em>Qty.</em></span> -->
+        <span title="Quantity">
+          {{ twenty_paise.length }}
+          <!-- <em>Qty.</em> -->
+        </span>
+      </button>
+      <!-- </div> -->
+
+      <!-- <div> -->
+      <button (click)="remove('ten_paise')">
+        10 <i class="paise">P.</i>
+        <!-- <span>{{ ten_paise.length }} <em>Qty.</em></span> -->
+        <span title="Quantity">
+          {{ ten_paise.length }}
+          <!-- <em>Qty.</em> -->
+        </span>
+      </button>
+      <!-- </div> -->
+
+      <!-- <div> -->
+      <button (click)="remove('five_paise')">
+        5 <i class="paise">P.</i>
+        <!-- <span>{{ five_paise.length }} <em>Qty.</em></span> -->
+        <span title="Quantity">
+          {{ five_paise.length }}
+          <!-- <em>Qty.</em> -->
+        </span>
+      </button>
+      <!-- </div> -->
+
+      <!-- <div> -->
+      <button (click)="remove('two_paise')">
+        2 <i class="paise">P.</i>
+        <!-- <span>{{ two_paise.length }} <em>Qty.</em></span> -->
+        <span title="Quantity">
+          {{ two_paise.length }}
+          <!-- <em>Qty.</em> -->
+        </span>
+      </button>
+      <!-- </div> -->
+
+      <!-- <div> -->
+      <button (click)="remove('one_paise')">
+        1 <i class="paise">P.</i>
+        <!-- <span>{{ one_paise.length }} <em>Qty.</em></span> -->
+        <span title="Quantity">
+          {{ one_paise.length }}
+          <!-- <em>Qty.</em> -->
+        </span>
+      </button>
+      <!-- </div> -->
     </div>
   </div>
 
-
-
   <div class="btn_box">
-    <a class="clear" href="javascript:void(0)" (click)="refillNotes()">Clear</a>
-    <a href="javascript:void(0)" (click)="checkAnswer(userAnswer)">Submit</a>
+    <a class="clear waves-effect" href="javascript:void(0)" (click)="refillNotes()">Clear</a>
+    <a class="waves-effect" href="javascript:void(0)" (click)="checkAnswer(userAnswer)">Submit</a>
     <!-- <a
       class="fa fa-times"
       href="javascript:void(0)"

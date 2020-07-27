@@ -61,7 +61,7 @@ this.countDown();
   resetAnimationState(state) {
     this.animationState = '';
   }
-  clicked(abc:string) { 
+  clicked(abc:string) {
     this.clk=abc;
     this.clickkey.emit(this.clk);
 

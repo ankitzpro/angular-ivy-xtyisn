@@ -3,6 +3,8 @@
   justify-content: space-between;
   min-height: calc(100vh - 30px);
   padding: 30px;
+  position: relative;
+  z-index: 9;
   @media (max-width: 600px) {
     min-height: calc(100vh - 20px);
     padding: 20px;
@@ -31,18 +33,19 @@ img {
 }
 
 button {
-  background: #3b8524;
-  box-shadow: 0px 0px 10px rgba(59, 133, 36, 0.4);
+  background: #176ede;
+  box-shadow: 0px 0px 10px rgba(26, 73, 186, 0.4);
   border-radius: 8px;
   height: 45px;
   font-size: 16px;
   color: #fff;
   display: inline-flex;
-  width: 130px;
+  width: 150px;
   align-items: center;
   justify-content: center;
   border: 0;
   font-weight: 600;
+  text-transform: uppercase;
   i {
     margin-left: 15px;
   }
@@ -55,7 +58,7 @@ button {
   position: relative;
   overflow: hidden;
   z-index: 9;
-  transition: .3s;
+  transition: 0.3s;
   &:after {
     content: "";
     position: absolute;
@@ -68,7 +71,7 @@ button {
     top: 0;
     left: 0;
     // background: #176ede;
-    background: rgba(0, 0, 0, 0.2)
+    background: rgba(0, 0, 0, 0.2);
   }
   &:hover {
     color: #fff !important;
@@ -87,4 +90,228 @@ button {
     font-size: 17px;
     line-height: 25px;
   }
+}
+
+
+
+.icon {
+  background: #ffffff;
+  border: 1px solid #176ede;
+  box-sizing: border-box;
+  box-shadow: 0px 2px 5px rgba(23, 110, 222, 0.3);
+  border-radius: 8px;
+  width: 80%;
+  overflow: hidden;
+  height: 300px;
+  margin: auto;
+  .my_bg {
+    background: #ffa300;
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-image: url(https://d8it4huxumps7.cloudfront.net/uploads/images/d2c-images/accuracy-aquarium-icon.svg);
+      width: 73px;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      right: 0;
+      margin: auto;
+    }
+  }
+  @media (max-width: 600px) {
+    width: 90%;
+  }
+}
+
+
+.bubbles{
+	background-color: rgba(255, 255, 255, 0.4);
+	border-radius: 50%;
+	height: 20px;
+	width: 20px;
+	position: absolute;
+	left: 10%;
+	bottom: -20px;
+}
+.b0{
+	animation-name:bubbles;
+	animation-delay:2s;
+	animation-duration:4s;
+	animation-iteration-count:infinite;
+	animation-timing-function: linear;
+}
+@keyframes bubbles{
+	from{
+		top:260px;
+		left:33px;
+	}
+	50%{
+		left:39px;
+	}
+	to{
+		top:0px;
+		left:33px;
+	}
+}
+@-moz-keyframes bubbles{
+	from{
+		top:260px;
+		left:33px;
+	}
+	50%{
+		left:39px;
+	}
+	to{
+		top:0px;
+		left:33px;
+	}
+}
+@-webkit-keyframes bubbles{
+	from{
+		top:260px;
+		left:33px;
+	}
+	50%{
+		left:39px;
+	}
+	to{
+		top:0px;
+		left:33px;
+	}
+}
+
+
+
+.b1{
+	animation-name:bubbles1;
+	animation-duration:7s;
+	animation-iteration-count:infinite;
+  animation-timing-function: linear;
+  left: auto;
+  right: 20px;
+}
+@keyframes bubbles1{
+	from{
+		top:260px;
+	}
+	to{
+		top:0px;
+	}
+}
+@-moz-keyframes bubbles1{
+	from{
+		top:260px;
+	}
+	to{
+		top:0px;
+	}
+}
+@-webkit-keyframes bubbles1{
+	from{
+		top:260px;
+	}
+	to{
+		top:0px;
+	}
+}
+
+.b2{
+	animation-name:bubbles2;
+	animation-delay:2s;
+	animation-duration:6s;
+	animation-iteration-count:infinite;
+	animation-timing-function: linear;
+}
+@keyframes bubbles2{
+	from{
+		top:260px;
+	}
+	to{
+		top:0px;
+	}
+}
+@-moz-keyframes bubbles2{
+	from{
+		top:260px;
+	}
+	to{
+		top:0px;
+	}
+}
+@-webkit-keyframes bubbles2{
+	from{
+		top:260px;
+	}
+	to{
+		top:0px;
+	}
+}
+
+.b3{
+	animation-name:bubbles3;
+	animation-delay:7s;
+	animation-duration:7s;
+	animation-iteration-count:infinite;
+  animation-timing-function: linear;
+  left:60px;
+}
+@keyframes bubbles3{
+	from{
+		top:260px;
+		left:60px;
+	}
+	25%{
+		left:30px;
+	}
+	50%{
+		left:58px;
+	}
+	75%{
+		left:37px;
+	}
+	to{
+		top:0px;
+		left:60px;
+	}
+}
+@-moz-keyframes bubbles3{
+	from{
+		top:260px;
+		left:60px;
+	}
+	25%{
+		left:30px;
+	}
+	50%{
+		left:58px;
+	}
+	75%{
+		left:37px;
+	}
+	to{
+		top:0px;
+		left:60px;
+	}
+}
+@-webkit-keyframes bubbles3{
+	from{
+		top:260px;
+		left:60px;
+	}
+	25%{
+		left:30px;
+	}
+	50%{
+		left:58px;
+	}
+	75%{
+		left:37px;
+	}
+	to{
+		top:0px;
+		left:60px;
+	}
 }

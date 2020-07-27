@@ -58,10 +58,10 @@ totanswers=[];
 
   question(){
     if(this.totanswers.length<6){
-      this.seconds=12;
+      this.seconds=8;
     }
     else{
-      this.seconds=8;
+      this.seconds=6;
     }
     var rand= Math.floor(Math.random() * (this.data.length));
 
@@ -84,11 +84,11 @@ totanswers=[];
   getAnswer(eventtext){
     switch(eventtext) {
           case 'left': {
-            this.anstext=this.answer=='Almost the same' ? 'Correct Answer' : 'Incorrect Answer';
+            this.anstext=this.answer=='Almost the Opposite' ? 'Correct Answer' : 'Incorrect Answer';
              break;
           }
           case 'right': {
-            this.anstext=this.answer=='Almost the Opposite' ? 'Correct Answer' : 'Incorrect Answer';
+            this.anstext=this.answer=='Almost the same' ? 'Correct Answer' : 'Incorrect Answer';
             break;
          } case 'down': {
           this.anstext=this.answer=='Totally Unrelated' ? 'Correct Answer' : 'Incorrect Answer';

@@ -78,7 +78,7 @@ export class SwipeComponent implements OnInit {
       //this.routers.navigate(['/question'],{ skipLocationChange: true });
       this.serv.compoChange('Timer');
     }
-    if (page > 2 && page <= 17 && this.eventText != 'up') {
+    if (page > 2 && page <= 17 && this.eventText != 'up' && this.composh != 'Timer') {
       this.parentSubject.next('swipe' + this.eventText);
       this.serv.getAnswer(this.eventText);
       this.serv.clearTimer();

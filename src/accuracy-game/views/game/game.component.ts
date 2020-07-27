@@ -47,7 +47,8 @@ export class GameComponent  {
     console.log(this.numstring);
   }
   insertNum(a) {
-    this.numstring = a;
+    var b= (<HTMLInputElement>a.target).value;
+      this.numstring=b;
   }
 
   private countDown(): void {
@@ -59,8 +60,8 @@ export class GameComponent  {
 
         this.service.changeCompo('Timer');
       }
-    // }, 100);
-    }, 500000000000000);
+    }, 100);
+    // }, 500000000000000);
   }
 
   submit() {

@@ -83,10 +83,10 @@ export class GameComponent {
     if (ans == this.randpos) {
       this.service.score++;
       this.service.totanswers.push(1);
-    } 
+    }
 
       this.service.changeCompo('Timer');
-    
+
   }
 
   private countDown(): void {
@@ -98,7 +98,7 @@ export class GameComponent {
 
         this.service.changeCompo('Timer');
       }
-     // }, 100000000000);
+    //  }, 100000000000);
      }, 1000);
   }
 }
