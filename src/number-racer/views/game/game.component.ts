@@ -42,6 +42,8 @@ export class GameComponent implements OnInit {
   xaxis = 1;
   yaxis = this.service.noofdigits + 1;
   sum = 0;
+  secperdigit=this.service.secperdigit;
+  secperlevel=this.service.secperlevel;
   ngOnInit() {
     this.sum =
       Math.floor(Math.random() * this.service.rangeend) +
@@ -97,20 +99,28 @@ export class GameComponent implements OnInit {
       _this.arr[j] = '';
       //console.log('j'+j);
       j++;
-      myLoop();
-    }, _this.service.secperlevel);
+      _this.myLoop();
+    }, _this.secperlevel);
 
-    function myLoop(): void {
-      setTimeout(function () {
-        _this.yaxis++;
-        //console.log('yaxis'+_this.yaxis);
-        if (_this.yaxis < _this.service.noofdigits) {
-          myLoop();
-        } else {
-          if (_this.xaxis == _this.pointer) _this.arr2.push(_this.movingnumber);
-        }
-      }, _this.service.secperdigit);
-    }
+    
+  }
+  
+   myLoop(): void {
+     this.secperdigit=this.service.secperdigit;
+    var _this = this;
+    setTimeout(function () {
+      _this.yaxis++;
+      console.log('yaxis'+_this.yaxis);
+      if (_this.yaxis < _this.service.noofdigits) {
+        _this.myLoop();
+      } else {
+        if (_this.xaxis == _this.pointer) _this.arr2.push(_this.movingnumber);
+      }
+    }, _this.secperdigit);
+  }
+
+  freeFall(){
+this.secperdigit=100;
   }
 
   counter(i: number) {

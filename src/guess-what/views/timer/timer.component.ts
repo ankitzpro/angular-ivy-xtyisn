@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AccuracyService} from '../../accuracy.service';
-//import { Router} from '@angular/router';
-
+import { GuessWhatService } from 'src/guess-what/guess-what.service';
 @Component({
   selector: 'timer',
   templateUrl: './timer.component.html',
@@ -9,15 +7,14 @@ import { AccuracyService} from '../../accuracy.service';
 })
 export class TimerComponent implements OnInit {
 
-  constructor(private service: AccuracyService
-  //,private routers:Router
-  ) { }
+  constructor(private service: GuessWhatService) { }
 anstext:String;
 intervalId: number = 0;
 message: string = '';
 seconds: number = 5;
+// levels:number=0;
 levels=this.service.level;
-score=this.service.score;
+
   ngOnInit() {
 this.anstext=this.service.anstext;
 this.countDown();
@@ -26,16 +23,14 @@ this.countDown();
     this.intervalId = window.setInterval(() => {
       this.seconds -= 1;
       if (this.seconds === 0 ) {
-        if(this.service.level>=12){
-         // this.routers.navigate(['/start'],{ skipLocationChange: true })
-         this.service.changeCompo('Finish');
+        if(this.service.level>=10){
+          this.service.changeCompo('Finish');
         }
         else{
-        this.service.level++;
-        //this.routers.navigate(['/game'],{ skipLocationChange: true })
-         this.service.changeCompo('Game');
+        this.service.changeCompo('Game');
       }
     }
+    // }, 100000000);
     }, 1000);
   }
 }

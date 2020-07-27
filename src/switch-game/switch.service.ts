@@ -21,11 +21,14 @@ score=0;
 
   
   levelupgrade(){
-    if(this.totanswers.length>1){
+    if(this.totanswers.length<5){
+      this.seconds=12;
+    }
+    else if(this.totanswers.length<9 && this.totanswers.length>4){
       this.seconds=10;
     }
     else{
-      this.seconds=12;
+      this.seconds=8;
     }
   }
   changeCompo(comp:string){

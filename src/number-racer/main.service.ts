@@ -26,7 +26,7 @@ levelUpdate(){
   this.level++;
   if( this.totanswers.length<4){
     this.rangestart=2;
-    this.rangeend=25;
+    this.rangeend=50;
     this.noofdigits=6;
     // this.secperdigit=3000000000000;
     // this.secperlevel=200000000000000;
@@ -36,8 +36,8 @@ levelUpdate(){
 
   }
   else if(this.totanswers.length>=4 && this.totanswers.length<8){
- this.rangestart=20;
-    this.rangeend=50;
+ this.rangestart=50;
+    this.rangeend=100;
     this.noofdigits=6;
     this.secperdigit=500;
     this.secperlevel=3200;

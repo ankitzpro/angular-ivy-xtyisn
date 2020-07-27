@@ -1,0 +1,132 @@
+<div class="d-flex timer_box" *ngIf="!showQuestion">
+  <div class="timer">
+    Next round will start in...
+    <div>{{ startCountDown }}</div>
+  </div>
+</div>
+
+<div class="d-flex" *ngIf="showQuestion">
+  <div>
+    <div class="label">
+      Time remaining
+      <div>
+        {{ timerCountDown }}
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="question">{{ meaning }}</div>
+    <div class="input_box mb-20">
+      <input
+        type="text"
+        maxLength="1"
+        size="1"
+        min="1"
+        max="9"
+        value="{{ userAnswer[i] }}"
+        *ngFor="let letter of correctArray; let i = index"
+        disabled
+      />
+    </div>
+  </div>
+
+  <div class="btm_bg">
+    <div class="input_box">
+      <ng-container *ngFor="let letter of letters; let i = index">
+        <button
+          type="checkbox"
+          (click)="insertInUserAnswer(letter, i)"
+          id="{{ letter + i }}"
+        >
+          {{ letter }}
+        </button>
+      </ng-container>
+    </div>
+
+    <div class="btn_box">
+      <button
+        href="javascript:void(0)"
+        [disabled]="maintainStack.length > 0 ? false : true"
+        class="clear waves-effect"
+        (click)="removeInUserAnswer()"
+      >
+        Clear
+      </button>
+      <button
+        class="waves-effect"
+        href="javascript:void(0)"
+        type="submit"
+        (click)="onSubmit()"
+      >
+        Submit
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="container">
+  <div class="row">
+    <div class="card col-lg-4 col-md-4 col-sm-4" *ngIf="!showQuestion">
+      <p class="card__name">Game</p>
+      <p class="card__name">
+        Game Start In
+      </p>
+      <p class="startCountDown">{{ startCountDown }}</p>
+    </div>
+    <div class="card col-lg-4 col-md-4 col-sm-4" *ngIf="showQuestion">
+      <div class="middle">
+      <div class="bar-container">
+        <div class="bar-5" [ngStyle]="{'width.%':timmerCountDown * 5}"></div>
+      </div>
+    </div>
+      <h3>{{ timerCountDown }}</h3>
+      level: {{ level }} | question: {{ quesNo }}
+      <div class="question" style="text-align: justify;">{{ meaning }}</div>
+      <div class="input_box flex">
+        <input
+          type="text"
+          maxLength="1"
+          size="1"
+          min="1"
+          max="9"
+          value="{{ userAnswer[i] }}"
+          *ngFor="let letter of correctArray; let i = index"
+          disabled
+        />
+      </div>
+      <div class="flex">
+        <ng-container *ngFor="let letter of letters; let i = index">
+          <button
+            type="checkbox"
+            class="enableAll"
+            (click)="insertInUserAnswer(letter, i)"
+            id="{{ letter + i }}"
+          >
+            {{ letter }}
+          </button>
+        </ng-container>
+      </div>
+      <div class="button-div" style="position: absolute; bottom: 0;">
+        <button
+          href="javascript:void(0)"
+          type="submit"
+          (click)="onSubmit()"
+          class="button4"
+          style="background-color: #f1bb4e;"
+        >
+          <span style="font-size: 24px;">Submit</span>
+        </button>
+        <button
+          href="javascript:void(0)"
+          [disabled]="maintainStack.length > 0 ? false : true"
+          class="button4"
+          style="background-color: #f14e4e;"
+          (click)="removeInUserAnswer()"
+        >
+          <span style="font-size: 24px;">Clear</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div> -->

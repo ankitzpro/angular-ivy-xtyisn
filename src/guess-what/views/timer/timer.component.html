@@ -1,0 +1,40 @@
+<div class="pdng">
+  <div class="timer">
+    <ng-container *ngIf="levels == 0">
+      Game starts in...
+    </ng-container>
+    <ng-container *ngIf="levels > 0">
+      Next round will start in...
+    </ng-container>
+    <div>{{ seconds }}</div>
+  </div>
+</div>
+
+<!-- <div *ngIf="levels>0" class="pdng">
+  <div class="ans correct">
+    <i class="fa fa-check" aria-hidden="true"></i>
+    {{ anstext }}
+  </div>
+  <div  class="timer">{{ seconds }}</div>
+</div> -->
+
+<!-- <div *ngIf="levels==0" class="pdng space-between">
+  <p class="cptn">
+    Catch the numbers to <br> achieve the target sum.
+  </p>
+  <div class="ftimer">
+    Game starts in...
+    <div>{{seconds}}</div>
+  </div>
+
+  <div class="move">
+    <div>
+      <i class="fa fa-long-arrow-left"></i>
+      <span>To <strong>“Move Left”</strong></span>
+    </div>
+    <div>
+      <i class="fa fa-long-arrow-right"></i>
+      <span>To <strong>“Move Right”</strong></span>
+    </div>
+  </div>
+</div> -->

@@ -29,23 +29,23 @@ textMaker(text:string){
 
 levelUpgrade(){
 if(this.totanswers.length<4){
-  this.seconds=20;
+  this.seconds=6;
   this.noofcards=4;
 }
 else if(this.totanswers.length>=4 && this.totanswers.length<8){
-  this.seconds=20;
+  this.seconds=7;
   this.noofcards=5;
 }
 else if(this.totanswers.length>=8 && this.totanswers.length<12){
-  this.seconds=20;
+  this.seconds=8;
   this.noofcards=6;
 }
 else if(this.totanswers.length>=12 && this.totanswers.length<16){
-  this.seconds=20;
+  this.seconds=10;
   this.noofcards=8;
 }
 else{
-  this.seconds=20;
+  this.seconds=10;
   this.noofcards=8;
 }
 }
