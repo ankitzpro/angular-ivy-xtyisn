@@ -26,10 +26,11 @@ p {
 img {
   display: block;
   margin: auto;
-  max-width: 85%;
-  @media (max-width: 600px) {
-    max-width: 100%;
-  }
+  // max-width: 85%;
+  max-width: 100%;
+  // @media (max-width: 600px) {
+  //   max-width: 100%;
+  // }
 }
 
 button {

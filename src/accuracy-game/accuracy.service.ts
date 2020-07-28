@@ -22,7 +22,7 @@ totanswers=[];
 
   scoreCalc(diff:any){
     this.clearTimer();
-
+    this.seconds=5;
     if(diff<7 && this.totanswers.length<4){
       this.score++;
       this.totanswers.push(1);
