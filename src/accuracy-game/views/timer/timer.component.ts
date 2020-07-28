@@ -27,6 +27,7 @@ this.countDown();
       this.seconds -= 1;
       if (this.seconds === 0 ) {
         if(this.service.level>=12){
+    this.seconds=5;
          // this.routers.navigate(['/start'],{ skipLocationChange: true })
          this.service.changeCompo('Finish');
         }

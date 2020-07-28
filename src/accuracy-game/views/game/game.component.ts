@@ -54,7 +54,7 @@ export class GameComponent  {
   private countDown(): void {
     this.service.intervalId = window.setInterval(() => {
       this.seconds -= 0.1;
-      this.service.seconds = this.seconds;
+     // this.service.seconds = this.seconds;
       if (this.seconds.toFixed(1) == '0.0') {
         this.service.anstext = "You didn't attempted";
 
